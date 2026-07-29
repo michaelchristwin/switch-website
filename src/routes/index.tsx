@@ -152,17 +152,17 @@ function Home() {
                   </span>
                 </div>
                 <div className="absolute top-1/2 right-4 -translate-y-1/2 flex flex-col gap-2 z-20">
-                  <div className="w-2 h-2 bg-secondary rounded-full animate-pulse shadow-[0_0_8px_theme(colors.secondary)]"></div>
-                  <div className="w-[1px] h-12 bg-outline mx-auto"></div>
+                  <div className="w-2 h-2 bg-secondary rounded-full animate-pulse shadow-[0_0_8px_var(--color-secondary)]"></div>
+                  <div className="w-px h-12 bg-outline mx-auto"></div>
                   <div className="font-label-caps text-[10px] text-on-surface [writing-mode:vertical-rl]">
                     STATUS_OK
                   </div>
                 </div>
                 <div className="relative w-full aspect-square max-w-2xl bg-surface-container border border-outline-variant p-4">
-                  <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-outline-variant -translate-x-[1px] -translate-y-[1px]"></div>
-                  <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-outline-variant translate-x-[1px] -translate-y-[1px]"></div>
-                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-outline-variant -translate-x-[1px] translate-y-[1px]"></div>
-                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-outline-variant translate-x-[1px] translate-y-[1px]"></div>
+                  <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-outline-variant -translate-x-px -translate-y-px"></div>
+                  <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-outline-variant translate-x-px -translate-y-px"></div>
+                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-outline-variant -translate-x-px translate-y-px"></div>
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-outline-variant translate-x-px translate-y-px"></div>
                   <div className="w-full h-full bg-surface-container-low border border-outline flex items-center justify-center overflow-hidden relative">
                     <img
                       alt="Smart Meter CUMULUS Series"
@@ -171,7 +171,7 @@ function Home() {
                     />
 
                     <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                      <div className="w-full h-[2px] bg-primary/30 blur-[1px] absolute top-0 animate-[scan_4s_ease-in-out_infinite]"></div>
+                      <div className="w-full h-0.5 bg-primary/30 blur-[1px] absolute top-0 animate-scan"></div>
                     </div>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ function Home() {
               </div>
               <div className="flex items-center">
                 <div className="w-full h-48 bg-surface/10 border border-surface/20 relative flex items-end p-4 gap-2">
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:16px_16px]"></div>
+                  <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-size-[16px_16px]"></div>
 
                   <div className="w-1/6 bg-error-container h-1/3 relative group">
                     <div className="absolute -top-6 left-1/2 -translate-x-1/2 font-data-mono text-[10px] text-error-container opacity-0 group-hover:opacity-100 transition-opacity">
@@ -534,7 +534,7 @@ function Home() {
           </section>
 
           <section className="w-full bg-primary py-20 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-size-[32px_32px]"></div>
             <div className="max-w-4xl mx-auto px-margin-desktop text-center relative z-10 flex flex-col items-center">
               <h2 className="font-display-lg text-display-lg text-on-primary mb-6">
                 Ready to upgrade your infrastructure?
@@ -636,7 +636,7 @@ function Home() {
         </div>
       </footer>
       <a
-        className="fixed bottom-8 right-8 z-[100] w-14 h-14 bg-white/60 backdrop-blur-xl border border-white/40 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform group"
+        className="fixed bottom-8 right-8 z-100 w-14 h-14 bg-white/60 backdrop-blur-xl border border-white/40 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform group"
         href="#"
       >
         <span className="material-symbols-outlined text-secondary text-3xl">
@@ -646,15 +646,6 @@ function Home() {
           SUPPORT_ONLINE
         </div>
       </a>
-      <style>{`
-    
-@keyframes scan {
-    0% { transform: translateY(-100%); }
-    50% { transform: translateY(100%); }
-    100% { transform: translateY(-100%); }
-}
-
-      `}</style>
     </div>
   )
 }
