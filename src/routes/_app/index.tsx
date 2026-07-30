@@ -15,9 +15,9 @@ function Home() {
           <div className="max-w-7xl mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 pt-20">
             <div className="col-span-1 lg:col-span-5 flex flex-col justify-center space-y-8 relative">
               <div>
-                <span className="inline-block bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps px-3 py-1 mb-6 border border-outline">
+                {/* <span className="inline-block bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps px-3 py-1 mb-6 border border-outline">
                   SYS_ONLINE // GRID_SYNC_ACTIVE
-                </span>
+                </span> */}
                 <h1 className="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">
                   Reliable, Verifiable <br />
                   <span className="text-primary italic font-serif">
@@ -78,8 +78,21 @@ function Home() {
                 </a>
               </div>
             </div>
+            <video
+              autoPlay
+              muted
+              playsInline
+              loop
+              preload="auto"
+              className="col-span-1 lg:col-span-7 relative rounded-2xl aspect-video shadow-lg"
+            >
+              <source
+                src="https://res.cloudinary.com/dga4ze3p2/video/upload/v1785399810/about_cumulus_intro.mp4"
+                type="video/mp4"
+              />
+            </video>
 
-            <div className="col-span-1 lg:col-span-7 relative flex items-center justify-center">
+            {/* <div className="col-span-1 lg:col-span-7 relative flex items-center justify-center">
               <div className="absolute top-10 left-10 bg-surface/60 backdrop-blur-md border border-white/40 p-3 flex flex-col gap-1 z-20 shadow-xl">
                 <span className="font-label-caps text-[10px] text-on-surface">
                   MAX_CURRENT
@@ -120,7 +133,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 

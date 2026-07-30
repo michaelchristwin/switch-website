@@ -115,10 +115,10 @@ body {
   --color-background: #f8f9fa;
   --color-on-error: #ffffff;
 
-  --radius-default: 0.125rem;
+  /* --radius-default: 0.125rem;
   --radius-lg: 0.25rem;
   --radius-xl: 0.5rem;
-  --radius-full: 0.75rem;
+  --radius-full: 0.75rem; */
 
   --spacing-gutter: '16px';
   --spacing-grid-line: '1px';
