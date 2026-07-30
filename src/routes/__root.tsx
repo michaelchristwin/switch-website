@@ -14,11 +14,11 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Switch Electric Ltd',
+        title: 'Pre-paid metering platform for all your solar projects',
       },
       {
         name: 'description',
-        content: 'Pre-paid metering platform for all your solar projects',
+        content: '',
       },
     ],
     links: [

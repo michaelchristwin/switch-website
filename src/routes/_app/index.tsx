@@ -1,3 +1,4 @@
+import { ExplodedView, FrontView } from '#/assets/schematics'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/_app/')({ component: Home })
@@ -15,9 +16,6 @@ function Home() {
           <div className="max-w-7xl mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 pt-20">
             <div className="col-span-1 lg:col-span-5 flex flex-col justify-center space-y-8 relative">
               <div>
-                {/* <span className="inline-block bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps px-3 py-1 mb-6 border border-outline">
-                  SYS_ONLINE // GRID_SYNC_ACTIVE
-                </span> */}
                 <h1 className="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">
                   Reliable, Verifiable <br />
                   <span className="text-primary italic font-serif">
@@ -92,49 +90,6 @@ function Home() {
                 type="video/mp4"
               />
             </video>
-
-            {/* <div className="col-span-1 lg:col-span-7 relative flex items-center justify-center">
-              <div className="absolute top-10 left-10 bg-surface/60 backdrop-blur-md border border-white/40 p-3 flex flex-col gap-1 z-20 shadow-xl">
-                <span className="font-label-caps text-[10px] text-on-surface">
-                  MAX_CURRENT
-                </span>
-                <span className="font-data-mono text-data-mono text-primary">
-                  100A RMS
-                </span>
-              </div>
-              <div className="absolute bottom-20 right-10 bg-inverse-surface/80 backdrop-blur-md border border-white/20 p-3 flex flex-col gap-1 z-20 shadow-xl">
-                <span className="font-label-caps text-[10px] text-inverse-on-surface">
-                  THEFT_DETECT
-                </span>
-                <span className="font-data-mono text-data-mono text-secondary-container">
-                  ACTIVE // SENSITIVE
-                </span>
-              </div>
-              <div className="absolute top-1/2 right-4 -translate-y-1/2 flex flex-col gap-2 z-20">
-                <div className="w-2 h-2 bg-secondary rounded-full animate-pulse shadow-[0_0_8px_var(--color-secondary)]"></div>
-                <div className="w-px h-12 bg-outline mx-auto"></div>
-                <div className="font-label-caps text-[10px] text-on-surface [writing-mode:vertical-rl]">
-                  STATUS_OK
-                </div>
-              </div>
-              <div className="relative w-full aspect-square max-w-2xl bg-surface-container border border-outline-variant p-4">
-                <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-outline-variant -translate-x-px -translate-y-px"></div>
-                <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-outline-variant translate-x-px -translate-y-px"></div>
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-outline-variant -translate-x-px translate-y-px"></div>
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-outline-variant translate-x-px translate-y-px"></div>
-                <div className="w-full h-full bg-surface-container-low border border-outline flex items-center justify-center overflow-hidden relative">
-                  <img
-                    alt="Smart Meter CUMULUS Series"
-                    className="w-full h-full object-contain p-8 mix-blend-multiply hover:scale-105 transition-transform duration-700"
-                    src="https://lh3.googleusercontent.com/aida/AP1WRLtc83e6Rg-bpK8lMaFwQD31vV14SFflKdyRUlY03yhgYp6JXVJHWZzQ0tR2naZUTEA1BsJZEcgzrfnnZhQdSBC_RawXrN6gMDb256SQrezPzTq3IbNfkk-YM-1hNZS7LZeD0NdKFIKmyr-6lY_yCWNgNg-naj6wKLfpwDTeBOUVP4tk4e-29ATqQdTvPS3CY2JPbZiBT4VPfHrVnqbSzF40n1IfwE_L66QzdOJYaiFJrtEzbXZky04_bWo"
-                  />
-
-                  <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                    <div className="w-full h-0.5 bg-primary/30 blur-[1px] absolute top-0 animate-scan"></div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </section>
 
@@ -191,7 +146,7 @@ function Home() {
                   Hardware Modules
                 </h2>
                 <div className="font-data-mono text-data-mono text-on-surface-variant mt-2">
-                  CUMULUS_METERING_UNIT // EXPLODED_VIEW
+                  CUMULUS METERING UNIT
                 </div>
               </div>
               <div className="font-label-caps text-label-caps text-outline hidden md:block">
@@ -201,7 +156,7 @@ function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative aspect-square bg-surface border border-outline group p-8 flex items-center justify-center">
                 <div className="absolute top-2 left-2 font-data-mono text-[10px] text-outline">
-                  FIG. 1 / FRONT_ELEVATION
+                  FIG. 1 / FRONT VIEW
                 </div>
 
                 <div className="absolute top-4 left-4 w-3 h-3 border-t border-l border-primary/50"></div>
@@ -209,7 +164,7 @@ function Home() {
                 <img
                   alt="Cumulus Meter Front View"
                   className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida/AP1WRLvtWoIOJzkYj8np1Y5MgHXi6GCdl_k9EbXHWhPzyg_ISX-s1yk4niFMgUF_UetznL4DiOiyUI-JYeTJWPQbx52haQEyAlFVxrudbN8rUcjMyP4q9arf5EeDFjDXhZWMr4Bk8GDhe-3F-9HibdH4FM_8rKiMXT-eRoblETqG2HJKckxymP_Fv9pCY6WJQpX3t_h3Y3WKrlokwGFulXmoGvUO-QMCxtKcfZamkgGGZII41dJtQV7QfnYEog"
+                  src={FrontView}
                 />
                 <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="bg-surface-container text-on-surface font-label-caps text-[10px] px-2 py-1 border border-outline">
@@ -223,7 +178,7 @@ function Home() {
 
               <div className="relative aspect-square bg-surface border border-outline group p-8 flex items-center justify-center">
                 <div className="absolute top-2 left-2 font-data-mono text-[10px] text-outline">
-                  FIG. 2 / ISOMETRIC_PERSPECTIVE
+                  FIG. 2 / EXPLODED VIEW
                 </div>
 
                 <div className="absolute top-4 right-4 w-3 h-3 border-t border-r border-primary/50"></div>
@@ -231,7 +186,7 @@ function Home() {
                 <img
                   alt="Cumulus Meter Isometric View"
                   className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida/AP1WRLt39JlxyLwVPOZfwsYgGXo7VGBV85Qx5jErAmTKof1cGugzsgcectCkhxl7yx3pRDPUCsV05s6Vxkn0ccYnrdiTA9lGWv49-nBzBTkRtLmNojUzi0NZFqEADSridVZ4sOihJEjnXh7h0LZj77nDmTx5PoWKS_uiIgw4QgvySNrE2fKbTzvtEjCE70U740JTwiHdG60oXdTx9FlZPIhCF9ZS882jX_rAKW03YSPKFyfrn15AIAjuasA6-qo"
+                  src={ExplodedView}
                 />
                 <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="bg-surface-container text-on-surface font-label-caps text-[10px] px-2 py-1 border border-outline">
@@ -502,10 +457,36 @@ function Home() {
             </p>
             <a
               className="bg-surface text-primary font-label-caps text-label-caps px-10 py-5 flex items-center gap-3 hover:bg-surface-container shadow-xl transition-transform hover:-translate-y-1"
-              href="#"
+              target="_blank"
+              href="https://wa.me/2348081147003"
             >
-              <span className="material-symbols-outlined">chat</span>
-              CONTACT_US_ON_WHATSAPP
+              <svg
+                viewBox="0 0 24 24"
+                width={20}
+                height={20}
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z"
+                    fill="#f07f2f"
+                  ></path>
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z"
+                    fill="#f07f2f"
+                  ></path>
+                </g>
+              </svg>
+              <span>CONTACT US ON WHATSAPP</span>
             </a>
           </div>
         </section>

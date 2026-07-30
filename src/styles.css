@@ -1,71 +1,5 @@
 @import 'tailwindcss';
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
-#app {
-  min-height: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-@layer base {
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-}
-::-webkit-scrollbar {
-  display: none;
-}
-.technical-grid {
-  background-image:
-    linear-gradient(to right, #edeeef 1px, transparent 1px),
-    linear-gradient(to bottom, #edeeef 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-.crosshair {
-  position: relative;
-}
-.crosshair::before,
-.crosshair::after {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #897265;
-}
-.crosshair-tl::before {
-  top: -6px;
-  left: -6px;
-  border-right: 0;
-  border-bottom: 0;
-}
-.crosshair-tr::after {
-  top: -6px;
-  right: -6px;
-  border-left: 0;
-  border-bottom: 0;
-}
-.crosshair-bl::before {
-  bottom: -6px;
-  left: -6px;
-  border-right: 0;
-  border-top: 0;
-}
-.crosshair-br::after {
-  bottom: -6px;
-  right: -6px;
-  border-left: 0;
-  border-top: 0;
-}
-
 @theme {
   --color-on-surface-variant: #564337;
   --color-inverse-primary: #ffb68a;
@@ -173,4 +107,73 @@ body {
   100% {
     transform: translateY(-100%);
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+.technical-grid {
+  background-image:
+    linear-gradient(to right, #edeeef 1px, transparent 1px),
+    linear-gradient(to bottom, #edeeef 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.crosshair {
+  position: relative;
+}
+.crosshair::before,
+.crosshair::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #897265;
+}
+.crosshair-tl::before {
+  top: -6px;
+  left: -6px;
+  border-right: 0;
+  border-bottom: 0;
+}
+.crosshair-tr::after {
+  top: -6px;
+  right: -6px;
+  border-left: 0;
+  border-bottom: 0;
+}
+.crosshair-bl::before {
+  bottom: -6px;
+  left: -6px;
+  border-right: 0;
+  border-top: 0;
+}
+.crosshair-br::after {
+  bottom: -6px;
+  right: -6px;
+  border-left: 0;
+  border-top: 0;
 }

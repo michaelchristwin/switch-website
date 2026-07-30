@@ -58,8 +58,8 @@ function RouteComponent() {
           </nav>
           <div className="flex items-center gap-4">
             <a
-              target="_blank"
               className="bg-secondary text-on-secondary px-6 py-3 font-label-caps text-label-caps flex items-center gap-2 hover:bg-on-secondary-container transition-all"
+              target="_blank"
               href="https://wa.me/2348081147003"
             >
               <span>WHATSAPP</span>
@@ -202,7 +202,7 @@ function RouteComponent() {
         </div>
         <div className="border-t border-outline-variant py-8">
           <div className="max-w-7xl mx-auto px-margin-desktop flex justify-between items-center font-data-mono text-[10px] text-outline uppercase tracking-widest">
-            <span>© 2024 WNS_INDUSTRIAL_CORE</span>
+            <span>© {new Date().getFullYear()} Switch Electric Ltd</span>
             <span>LAT: 40.7128 N / LONG: 74.0060 W</span>
           </div>
         </div>
@@ -238,7 +238,7 @@ function RouteComponent() {
             ></path>
           </g>
         </svg>
-        <div className="absolute -top-10 right-0 bg-[#25d366] text-on-secondary font-label-caps text-[10px] px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+        <div className="absolute -top-10 right-0 rounded-md bg-[#25d366] text-on-secondary font-label-caps text-[10px] px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
           WhatsApp
         </div>
       </a>
