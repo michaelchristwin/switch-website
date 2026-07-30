@@ -32,8 +32,8 @@ function RouteComponent() {
               HOME
             </Link>
             <Link
-              className="font-label-caps text-label-caps transition-colors tracking-widest"
               to="/product-catalog"
+              className="font-label-caps text-label-caps transition-colors tracking-widest"
               activeProps={{
                 className: 'text-primary border-b-2 border-primary',
               }}
@@ -43,13 +43,18 @@ function RouteComponent() {
             >
               PRODUCT CATALOG
             </Link>
-            <a
-              className="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors tracking-widest"
-              data-path="data-sheet"
-              href="#"
+            <Link
+              to="/data-sheet"
+              className="font-label-caps text-label-caps transition-colors tracking-widest"
+              activeProps={{
+                className: 'text-primary border-b-2 border-primary',
+              }}
+              inactiveProps={{
+                className: 'text-on-surface-variant hover:text-primary',
+              }}
             >
               DATA SHEET
-            </a>
+            </Link>
           </nav>
           <div className="flex items-center gap-4">
             <a
