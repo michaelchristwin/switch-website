@@ -34,7 +34,8 @@ function Home() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a
                   className="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 flex items-center justify-center gap-3 hover:bg-on-primary-container transition-colors border border-primary relative overflow-hidden group"
-                  href="https://api.whatsapp.com/send?phone=2348081147003"
+                  target="_blank"
+                  href="https://wa.me/2348081147003"
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     CHAT ON WHATSAPP
