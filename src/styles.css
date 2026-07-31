@@ -48,12 +48,12 @@
   --color-error-container: #ffdad6;
   --color-background: #f8f9fa;
   --color-on-error: #ffffff;
-  --color-whatsapp: #25d366
-    /* --radius-default: 0.125rem;
+  --color-whatsapp: #25d366;
+  /* --radius-default: 0.125rem;
   --radius-lg: 0.25rem;
   --radius-xl: 0.5rem;
   --radius-full: 0.75rem; */
-    --spacing-gutter: '16px';
+  --spacing-gutter: '16px';
   --spacing-grid-line: '1px';
   --spacing-margin-mobile: '16px';
   --spacing-unit: '4px';

@@ -9,7 +9,7 @@ function RouteComponent() {
   return (
     <div className="bg-surface font-body-base text-on-surface technical-grid">
       <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant">
-        <div className="h-20 max-w-7xl mx-auto px-margin-desktop flex items-center justify-between">
+        <div className="h-20 max-w-[81%] mx-auto px-margin-desktop flex items-center justify-between">
           <Link to="/">
             <img
               alt="Profile"
@@ -95,7 +95,7 @@ function RouteComponent() {
       </header>
       <Outlet />
       <footer className="w-full bg-surface-container-highest border-t border-outline">
-        <div className="max-w-7xl mx-auto px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="max-w-[81%] mx-auto px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="font-label-caps text-label-caps text-primary">
               SYSTEM_IDENTITY
@@ -201,7 +201,7 @@ function RouteComponent() {
           </div>
         </div>
         <div className="border-t border-outline-variant py-8">
-          <div className="max-w-7xl mx-auto px-margin-desktop flex justify-between items-center font-data-mono text-[10px] text-outline uppercase tracking-widest">
+          <div className="max-w-[81%] mx-auto px-margin-desktop flex justify-between items-center font-data-mono text-[10px] text-outline uppercase tracking-widest">
             <span>© {new Date().getFullYear()} Switch Electric Ltd</span>
             <span>LAT: 40.7128 N / LONG: 74.0060 W</span>
           </div>
@@ -238,7 +238,7 @@ function RouteComponent() {
             ></path>
           </g>
         </svg>
-        <div className="absolute -top-10 right-0 rounded-md bg-[#25d366] text-on-secondary font-label-caps text-[10px] px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+        <div className="absolute -top-10 right-0 rounded-md bg-whatsapp text-on-secondary font-label-caps text-[10px] px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
           WhatsApp
         </div>
       </a>

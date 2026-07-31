@@ -14,7 +14,7 @@ function RouteComponent() {
         {/* <!-- Crosshair decorations --> */}
         <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-outline -ml-px -mt-px"></div>
         <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-outline -mr-px -mt-px"></div>
-        <section className="max-w-7xl mx-auto px-margin-desktop py-12 lg:py-24 w-full border-b border-outline-variant relative">
+        <section className="max-w-[81%] mx-auto px-margin-desktop py-12 lg:py-24 w-full border-b border-outline-variant relative">
           <div className="absolute top-0 left-margin-desktop w-px h-full bg-outline-variant/30 hidden lg:block"></div>
           <div className="absolute top-0 right-margin-desktop w-px h-full bg-outline-variant/30 hidden lg:block"></div>
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative z-10">
@@ -130,7 +130,7 @@ function RouteComponent() {
         </section>
         {/* <!-- Complete Spec Table Section --> */}
         <section className="w-full bg-surface-container-lowest border-b border-outline-variant">
-          <div className="max-w-7xl mx-auto px-margin-desktop py-16">
+          <div className="max-w-[81%] mx-auto px-margin-desktop py-16">
             <div className="flex items-center justify-between border-b-2 border-on-surface pb-4 mb-12">
               <h2 className="font-headline-md text-headline-md text-on-surface uppercase">
                 HARDWARE_PARAMETERS
@@ -260,7 +260,7 @@ function RouteComponent() {
           className="w-full bg-surface py-16 border-b border-outline-variant overflow-hidden relative"
           id="engineering-drawings"
         >
-          <div className="max-w-7xl mx-auto px-margin-desktop">
+          <div className="max-w-[81%] mx-auto px-margin-desktop">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div className="lg:col-span-1 space-y-8">
                 <div>

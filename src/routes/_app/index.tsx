@@ -13,8 +13,8 @@ function Home() {
           <div className="absolute top-margin-desktop right-margin-desktop crosshair crosshair-tr pointer-events-none"></div>
           <div className="absolute bottom-margin-desktop left-margin-desktop crosshair crosshair-bl pointer-events-none"></div>
           <div className="absolute bottom-margin-desktop right-margin-desktop crosshair crosshair-br pointer-events-none"></div>
-          <div className="max-w-7xl mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 pt-20">
-            <div className="col-span-1 lg:col-span-5 flex flex-col justify-center space-y-8 relative">
+          <div className="max-w-[81%] mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 pt-20">
+            <div className="col-span-1 lg:col-span-5 flex flex-col justify-center space-y-8 relative md:mx-auto">
               <div>
                 <h1 className="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">
                   Reliable, Verifiable <br />
@@ -83,7 +83,7 @@ function Home() {
               playsInline
               loop
               preload="auto"
-              className="col-span-1 lg:col-span-7 relative rounded-2xl aspect-video shadow-lg"
+              className="col-span-1 lg:col-span-7 relative rounded-2xl aspect-video shadow-lg md:mx-auto"
             >
               <source
                 src="https://res.cloudinary.com/dga4ze3p2/video/upload/v1785399810/about_cumulus_intro.mp4"
@@ -94,7 +94,7 @@ function Home() {
         </section>
 
         <section className="w-full bg-inverse-surface text-inverse-on-surface py-24 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
+          <div className="max-w-[81%] mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
             <div>
               <div className="font-label-caps text-label-caps text-inverse-primary mb-4 flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm">
@@ -139,7 +139,7 @@ function Home() {
         </section>
 
         <section className="w-full py-24 bg-surface-bright relative">
-          <div className="max-w-7xl mx-auto px-margin-desktop">
+          <div className="max-w-[81%] mx-auto px-margin-desktop">
             <div className="flex justify-between items-end mb-12 border-b border-outline-variant pb-4">
               <div>
                 <h2 className="font-headline-md text-headline-md text-on-surface">
@@ -202,7 +202,7 @@ function Home() {
         </section>
 
         <section className="w-full py-24 bg-surface-container-lowest border-y border-outline-variant relative">
-          <div className="max-w-7xl mx-auto px-margin-desktop">
+          <div className="max-w-[81%] mx-auto px-margin-desktop">
             <div className="mb-16">
               <span className="font-label-caps text-label-caps text-primary border border-primary px-2 py-1">
                 TECH_SPECS
@@ -277,7 +277,7 @@ function Home() {
           className="w-full py-24 bg-surface-container-highest relative"
           id="demo"
         >
-          <div className="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="max-w-[81%] mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="col-span-1 lg:col-span-4 flex flex-col gap-6">
               <h2 className="font-headline-md text-headline-md text-on-surface">
                 Data Visibility at Scale
@@ -297,7 +297,7 @@ function Home() {
                 </span>
               </div>
               <button className="w-fit mt-4 bg-transparent border border-on-surface text-on-surface font-label-caps text-label-caps px-6 py-3 hover:bg-on-surface hover:text-surface transition-colors flex items-center gap-2">
-                REQUEST_DEMO_ACCESS{' '}
+                <span>REQUEST DEMO ACCESS</span>
                 <span className="material-symbols-outlined text-sm">
                   open_in_new
                 </span>
@@ -332,7 +332,7 @@ function Home() {
         </section>
 
         <section className="w-full bg-inverse-surface text-inverse-on-surface py-16 border-y border-outline">
-          <div className="max-w-7xl mx-auto px-margin-desktop">
+          <div className="max-w-[81%] mx-auto px-margin-desktop">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
               <div className="col-span-1 border-r border-surface-container-highest/30 pr-8">
                 <div className="font-label-caps text-label-caps text-inverse-primary mb-2">

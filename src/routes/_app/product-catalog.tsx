@@ -13,7 +13,7 @@ function RouteComponent() {
           {/* <!-- Decorative blueprint crosshairs --> */}
           <div className="absolute top-4 left-4 crosshair crosshair-tl opacity-50"></div>
           <div className="absolute top-4 right-4 crosshair crosshair-tr opacity-50"></div>
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8 relative z-10">
+          <div className="max-w-[81%] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8 relative z-10">
             <div className="flex flex-col gap-4 max-w-2xl">
               <span className="font-label-caps text-label-caps text-primary tracking-widest bg-primary/10 px-2 py-1 w-fit">
                 SYS.CATALOG // V.2.0.4
@@ -44,8 +44,8 @@ function RouteComponent() {
                 fill="none"
                 height="48"
                 stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="1.5"
+                strokeLinecap="square"
+                strokeWidth="1.5"
                 viewBox="0 0 24 24"
                 width="48"
               >
@@ -54,7 +54,7 @@ function RouteComponent() {
                   cy="12"
                   r="10"
                   stroke="currentColor"
-                  stroke-opacity="0.2"
+                  strokeOpacity={0.2}
                 ></circle>
                 <path d="M12 2a10 10 0 0 1 8 4" stroke="currentColor"></path>
                 <path d="M12 12l4-4" stroke="currentColor"></path>
@@ -70,7 +70,7 @@ function RouteComponent() {
           </div>
         </div>
         {/* <!-- Main Catalog Grid Layout --> */}
-        <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto px-margin-desktop gap-12 relative z-20 -mt-12 mb-24">
+        <div className="flex flex-col lg:flex-row w-full max-w-[81%] mx-auto px-margin-desktop gap-12 relative z-20 -mt-12 mb-24">
           {/* <!-- Decorative Sidebar Menu --> */}
           <div className="hidden lg:flex flex-col w-12 items-center pt-16 gap-12">
             <span className="font-label-caps text-label-caps text-outline-variant [writing-mode:vertical-rl] rotate-180 tracking-widest whitespace-nowrap">
