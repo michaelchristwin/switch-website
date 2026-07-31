@@ -13,7 +13,7 @@ function RouteComponent() {
           <Link to="/">
             <img
               alt="Profile"
-              className="w-14 h-14 rounded-full object-cover"
+              className="w-18 h-18 object-cover"
               src={SwitchLogo}
             />
           </Link>

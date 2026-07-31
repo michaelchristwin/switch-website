@@ -1,9 +1,19 @@
 import { ExplodedView, FrontView } from '#/assets/schematics'
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
+import { useEffect, useRef } from 'react'
 
 export const Route = createFileRoute('/_app/')({ component: Home })
 
 function Home() {
+  const introVideo = useRef<HTMLVideoElement | null>(null)
+  const installationVideo = useRef<HTMLVideoElement | null>(null)
+
+  useEffect(() => {
+    if (!introVideo.current) return
+    introVideo.current.playbackRate = 0.6
+    if (!installationVideo.current) return
+    installationVideo.current.playbackRate = 0.5
+  }, [introVideo])
   return (
     <main className="w-full pt-20 min-h-screen">
       <div className="flex flex-col w-full">
@@ -78,6 +88,7 @@ function Home() {
               </div>
             </div>
             <video
+              ref={introVideo}
               autoPlay
               muted
               playsInline
@@ -212,58 +223,58 @@ function Home() {
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant border border-outline-variant">
-              <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-surface-container transition-colors group">
+              <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-primary/80 transition-colors group">
                 <div className="w-12 h-12 border border-outline flex items-center justify-center bg-surface-bright group-hover:border-primary group-hover:text-primary transition-colors">
                   <span className="material-symbols-outlined">bolt</span>
                 </div>
-                <h3 className="font-data-mono text-data-mono text-on-surface text-lg">
+                <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
                   100A Max Current
                 </h3>
-                <p className="font-body-base text-sm text-on-surface-variant">
+                <p className="font-body-base text-sm text-on-surface-variant group-hover:text-white">
                   Designed to handle significant load variations without
                   tripping, ensuring continuous supply for high-demand
                   residential and light-commercial applications.
                 </p>
               </div>
 
-              <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-surface-container transition-colors group">
+              <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-primary/80 transition-colors group">
                 <div className="w-12 h-12 border border-outline flex items-center justify-center bg-surface-bright group-hover:border-primary group-hover:text-primary transition-colors">
                   <span className="material-symbols-outlined">security</span>
                 </div>
-                <h3 className="font-data-mono text-data-mono text-on-surface text-lg">
+                <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
                   Advanced Theft Detection
                 </h3>
-                <p className="font-body-base text-sm text-on-surface-variant">
+                <p className="font-body-base text-sm text-on-surface-variant group-hover:text-white">
                   Multi-sensor tamper detection logs magnetic interference,
                   cover removal, and reverse current flow, instantly reporting
                   anomalies to the central dashboard.
                 </p>
               </div>
 
-              <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-surface-container transition-colors group">
+              <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-primary/80 transition-colors group">
                 <div className="w-12 h-12 border border-outline flex items-center justify-center bg-surface-bright group-hover:border-primary group-hover:text-primary transition-colors">
                   <span className="material-symbols-outlined">
                     network_check
                   </span>
                 </div>
-                <h3 className="font-data-mono text-data-mono text-on-surface text-lg">
+                <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
                   Predictive Maintenance
                 </h3>
-                <p className="font-body-base text-sm text-on-surface-variant">
+                <p className="font-body-base text-sm text-on-surface-variant group-hover:text-white">
                   Machine learning algorithms analyze power quality data locally
                   to predict relay wear and capacitor degradation before
                   catastrophic failure.
                 </p>
               </div>
 
-              <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-surface-container transition-colors group">
+              <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-primary/80 transition-colors group">
                 <div className="w-12 h-12 border border-outline flex items-center justify-center bg-surface-bright group-hover:border-primary group-hover:text-primary transition-colors">
                   <span className="material-symbols-outlined">sync_alt</span>
                 </div>
-                <h3 className="font-data-mono text-data-mono text-on-surface text-lg">
+                <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
                   Bi-directional Metering
                 </h3>
-                <p className="font-body-base text-sm text-on-surface-variant">
+                <p className="font-body-base text-sm text-on-surface-variant group-hover:text-white">
                   Natively supports solar net-metering. Accurately records
                   imported and exported energy on separate registers for precise
                   billing.
@@ -296,15 +307,18 @@ function Home() {
                   99.9% UPTIME SLA
                 </span>
               </div>
-              <button className="w-fit mt-4 bg-transparent border border-on-surface text-on-surface font-label-caps text-label-caps px-6 py-3 hover:bg-on-surface hover:text-surface transition-colors flex items-center gap-2">
-                <span>REQUEST DEMO ACCESS</span>
+              <Link
+                to="/data-sheet"
+                className="w-fit mt-4 bg-transparent border border-on-surface text-on-surface font-label-caps text-label-caps px-6 py-3 hover:bg-on-surface hover:text-surface transition-colors flex items-center gap-2"
+              >
+                <span>VIEW DATA SHEET</span>
                 <span className="material-symbols-outlined text-sm">
                   open_in_new
                 </span>
-              </button>
+              </Link>
             </div>
             <div className="col-span-1 lg:col-span-8 relative">
-              <div className="bg-surface border border-outline p-2 relative shadow-2xl">
+              {/* <div className="bg-surface border border-outline p-2 relative shadow-2xl">
                 <div className="flex items-center gap-2 mb-2 px-2 border-b border-outline-variant pb-2">
                   <div className="w-2 h-2 rounded-full bg-error"></div>
                   <div className="w-2 h-2 rounded-full bg-primary-container"></div>
@@ -313,20 +327,20 @@ function Home() {
                     SWITCH_DASHBOARD_V2.1
                   </div>
                 </div>
-                <img
-                  alt="Switch Management Dashboard Interface"
-                  className="w-full h-auto object-cover border border-outline-variant"
-                  src="https://lh3.googleusercontent.com/aida/AP1WRLv08Y7nDvlLkJ-PNQ56GejdYlycHWUJmhZ7-5gPWcog1A_lwCiw14RjMVapbYJX66EEpfDVKKCjNeSDen6yBrQdjLdb_7tRjWUr_M-pm15IRQ_jB9FtVRvcG9hZr3RfD7zH_ictwR-Id5FU2M0gGYu9JUULEoM3MzU2enjKGggSPesPFjck4K546Fd6rjKyfaxW1DJBDS3p_4tCEUs8GOsEarv54sqWGNv5E17W993lw_WxCsdV9MQAWU0"
+              </div> */}
+              <video
+                autoPlay
+                muted
+                playsInline
+                loop
+                preload="auto"
+                className="w-full h-auto object-cover border rounded-2xl aspect-video shadow-lg md:mx-auto"
+              >
+                <source
+                  src="https://res.cloudinary.com/dga4ze3p2/video/upload/v1785398678/how_to_install_cumulus.mp4"
+                  type="video/mp4"
                 />
-
-                <div className="absolute inset-0 flex items-center justify-center bg-inverse-surface/20 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity cursor-pointer group">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-on-primary group-hover:scale-110 transition-transform">
-                    <span className="material-symbols-outlined text-4xl">
-                      play_arrow
-                    </span>
-                  </div>
-                </div>
-              </div>
+              </video>
             </div>
           </div>
         </section>
@@ -346,14 +360,14 @@ function Home() {
               </div>
               <div className="col-span-1 md:col-span-2 flex flex-col gap-6 pl-0 md:pl-4">
                 <div className="font-label-caps text-label-caps text-surface-container-highest">
-                  COMPLIANCE_STANDARDS
+                  COMPLIANCE STANDARDS
                 </div>
                 <div className="flex flex-wrap gap-4 font-data-mono text-sm text-inverse-on-surface">
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-sm text-secondary-container">
                       check_circle
                     </span>{' '}
-                    IEC 62052-11
+                    SON 62052-11
                   </span>
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-sm text-secondary-container">
@@ -456,7 +470,7 @@ function Home() {
               technical schematics, and pilot deployment discussions.
             </p>
             <a
-              className="bg-surface text-primary font-label-caps text-label-caps px-10 py-5 flex items-center gap-3 hover:bg-surface-container shadow-xl transition-transform hover:-translate-y-1"
+              className="bg-secondary text-inverse-on-surface font-label-caps text-label-caps px-10 py-5 flex items-center gap-3 hover:bg-secondary/80 shadow-xl transition-transform hover:-translate-y-1"
               target="_blank"
               href="https://wa.me/2348081147003"
             >
@@ -476,13 +490,13 @@ function Home() {
                 <g id="SVGRepo_iconCarrier">
                   <path
                     d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z"
-                    fill="#f07f2f"
+                    fill="#f0f1f2"
                   ></path>
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z"
-                    fill="#f07f2f"
+                    fill="#f0f1f2"
                   ></path>
                 </g>
               </svg>
