@@ -1,3 +1,5 @@
+import { IsometricProjection } from '#/assets/schematics'
+import { WhatsApp } from '#/components/icons/WhatsApp'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/_app/data-sheet')({
@@ -63,20 +65,18 @@ function RouteComponent() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <button className="bg-primary text-on-primary px-8 py-4 font-label-caps text-label-caps tracking-widest flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors border border-transparent">
+                <button className="bg-primary text-on-primary px-8 py-4 font-label-caps text-sm tracking-widest flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors border border-transparent">
                   <span className="material-symbols-outlined text-[18px]">
                     download
                   </span>
-                  DOWNLOAD_PDF_DATASHEET
+                  DOWNLOAD PDF DATASHEET
                 </button>
                 <a
-                  className="border border-outline text-on-surface px-8 py-4 font-label-caps text-label-caps tracking-widest flex items-center gap-2 hover:bg-surface-variant transition-colors group"
-                  href="#engineering-drawings"
+                  className="text-on-secondary bg-secondary hover:translate-y-1 px-8 py-4 font-label-caps text-sm tracking-widest flex items-center gap-2 hover:bg-on-secondary-container transition-colors group"
+                  href="https://wa.me/2349065789011"
                 >
-                  VIEW_SCHEMATICS
-                  <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
-                    arrow_right_alt
-                  </span>
+                  <span>TECHNICAL SUPPORT</span>
+                  <WhatsApp color="#ffffff" width={18} height={18} />
                 </a>
               </div>
             </div>
@@ -89,41 +89,12 @@ function RouteComponent() {
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-outline"></div>
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-outline"></div>
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-outline"></div>
-              {/* <!-- Image container with HUD elements --> */}
-              <div className="relative w-full max-w-md aspect-square p-8">
-                <img
-                  alt="Cumulus Series G3 Hardware"
-                  className="w-full h-full object-contain filter contrast-125 saturate-50 drop-shadow-2xl mix-blend-multiply"
-                  src="https://lh3.googleusercontent.com/aida/AP1WRLt39JlxyLwVPOZfwsYgGXo7VGBV85Qx5jErAmTKof1cGugzsgcectCkhxl7yx3pRDPUCsV05s6Vxkn0ccYnrdiTA9lGWv49-nBzBTkRtLmNojUzi0NZFqEADSridVZ4sOihJEjnXh7h0LZj77nDmTx5PoWKS_uiIgw4QgvySNrE2fKbTzvtEjCE70U740JTwiHdG60oXdTx9FlZPIhCF9ZS882jX_rAKW03YSPKFyfrn15AIAjuasA6-qo"
+              <div className="relative w-full p-8">
+                <iframe
+                  className="h-100 w-full border border-outline bg-white sm:h-130"
+                  src="/assets/cumulus-datasheet.pdf#view=FitH"
+                  title="Cumulus product data sheet"
                 />
-                {/* <!-- Telemetry Overlay 1 --> */}
-                <div className="absolute top-[20%] left-[10%] backdrop-blur-md bg-surface/80 border border-outline px-3 py-1.5 flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-secondary animate-pulse"></div>
-                  <span className="font-data-mono text-[10px] text-on-surface tracking-wider">
-                    OPTICAL_PORT_ACTIVE
-                  </span>
-                </div>
-                {/* <!-- Telemetry Overlay 2 --> */}
-                <div className="absolute bottom-[30%] right-[5%] backdrop-blur-md bg-surface/80 border border-outline px-3 py-1.5 flex items-center gap-2">
-                  <span className="font-data-mono text-[10px] text-on-surface tracking-wider">
-                    TERMINAL_BLOCK_100A
-                  </span>
-                </div>
-                {/* <!-- Measurement Lines --> */}
-                <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-[80%] h-px border-t border-dashed border-outline">
-                  <div className="absolute -top-3.75 left-1/2 -translate-x-1/2 font-data-mono text-[10px] text-outline bg-surface px-2">
-                    145mm
-                  </div>
-                  <div className="absolute left-0 -top-1 w-px h-2 bg-outline"></div>
-                  <div className="absolute right-0 -top-1 w-px h-2 bg-outline"></div>
-                </div>
-                <div className="absolute -left-2.5 top-1/2 -translate-y-1/2 h-[90%] w-px border-l border-dashed border-outline">
-                  <div className="absolute -left-6.25 top-1/2 -translate-y-1/2 font-data-mono text-[10px] text-outline bg-surface py-2 [writing-mode:vertical-rl]">
-                    210mm
-                  </div>
-                  <div className="absolute top-0 -left-1 h-px w-2 bg-outline"></div>
-                  <div className="absolute bottom-0 -left-1 h-px w-2 bg-outline"></div>
-                </div>
               </div>
             </div>
           </div>
@@ -320,15 +291,15 @@ function RouteComponent() {
                 {/* <!-- Conceptual Blueprint Image placeholder --> */}
                 <div className="w-full aspect-video border border-outline p-2 bg-surface-container-low relative group">
                   {/* <!-- Top right tab --> */}
-                  <div className="absolute -top-px right-4 bg-outline text-surface-container-lowest font-label-caps text-[9px] px-2 py-0.5 uppercase">
-                    DWG_REF_CUMULUS_DIM
+                  <div className="absolute -top-px right-4 bg-outline text-surface-container-lowest font-label-caps z-10 text-[9px] px-2 py-0.5 uppercase">
+                    ISOMETRIC PROJECTION
                   </div>
                   <div className="w-full h-full border border-dashed border-outline-variant bg-surface relative flex items-center justify-center overflow-hidden">
                     <div
                       className="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-multiply"
                       data-alt="A highly detailed, technical blueprint-style line drawing of a 3-phase electric meter, shown in multiple orthographic views (front, side, top) on a pale industrial grid background, rendered in thin charcoal lines with measurement callouts, strictly adhering to an engineering schematic aesthetic."
                       style={{
-                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdjle2CQHcQGk0Voz9AtO0zwSdKUHcnMGiroMgsb0NC-AF-BPZUfGAN5taFJESIWR6-G_P7-2mKrAArjSl_OR99mHHw0YP1Gxc59xyCUfmm1xBrnC9e_fllzqgc6TTDF7pHliG1R0U3tE8UZd3vz_b1Oq1ZQbxbsm3nGTi7WT-HQ5BC2nLO7e4MuWa5xvY2OgA5t6D75buN4U8y-hb3R7oXwFkqd7MQr5t12XDDn3Hx8h81mmOCqby')`,
+                        backgroundImage: `url(${IsometricProjection})`,
                       }}
                     ></div>
                     {/* <!-- Overlay dimensions text for realism --> */}
@@ -382,11 +353,11 @@ function RouteComponent() {
               deployment support.
             </p>
             <a
-              className="bg-secondary text-on-secondary px-8 py-5 font-label-caps text-[14px] font-bold tracking-widest flex items-center gap-3 hover:bg-secondary-fixed transition-colors border border-transparent shadow-[4px_4px_0px_0px_rgba(184,242,166,0.3)] hover:shadow-none hover:translate-y-1 hover:translate-x-1 duration-200"
-              href="#"
+              className="bg-secondary text-on-secondary px-8 py-5 font-label-caps text-[14px] font-bold tracking-widest flex items-center gap-3 hover:bg-secondary/60 transition-colors border border-transparent shadow-[4px_4px_0px_0px_rgba(184,242,166,0.3)] hover:shadow-none hover:translate-y-1 hover:translate-x-1 duration-200"
+              href="https://wa.me/2348081147003"
             >
-              <span className="material-symbols-outlined">chat</span>
-              CONNECT_ON_WHATSAPP
+              <WhatsApp width={20} height={20} color="#ffffff" />
+              CONNECT ON WHATSAPP
             </a>
             <div className="mt-8 font-data-mono text-[10px] text-surface-dim opacity-70">
               &gt; SYSTEM_STATUS: ENGINEERS_ONLINE
