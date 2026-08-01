@@ -5,7 +5,7 @@ import { createFileRoute } from '@tanstack/react-router'
 export const Route = createFileRoute('/_app/data-sheet')({
   component: RouteComponent,
   head: () => ({
-    meta: [{ title: 'Data Sheet | Switch ' }],
+    meta: [{ title: 'Data Sheet | Switch' }],
   }),
 })
 
@@ -65,18 +65,19 @@ function RouteComponent() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <button className="bg-primary text-on-primary px-8 py-4 font-label-caps text-sm tracking-widest flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors border border-transparent">
+                <button className="bg-primary text-on-primary md:px-8 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors">
                   <span className="material-symbols-outlined text-[18px]">
                     download
                   </span>
                   DOWNLOAD PDF DATASHEET
                 </button>
                 <a
-                  className="text-on-secondary bg-secondary hover:translate-y-1 px-8 py-4 font-label-caps text-sm tracking-widest flex items-center gap-2 hover:bg-on-secondary-container transition-colors group"
+                  className="text-on-secondary bg-secondary hover:translate-y-1 md:px-8 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center gap-2 hover:bg-on-secondary-container transition-colors group"
                   href="https://wa.me/2349065789011"
+                  target="_blank"
                 >
                   <span>TECHNICAL SUPPORT</span>
-                  <WhatsApp color="#ffffff" width={18} height={18} />
+                  <WhatsApp color="#ffffff" width={20} height={20} />
                 </a>
               </div>
             </div>
@@ -101,9 +102,9 @@ function RouteComponent() {
         </section>
         {/* <!-- Complete Spec Table Section --> */}
         <section className="w-full bg-surface-container-lowest border-b border-outline-variant">
-          <div className="max-w-[81%] mx-auto px-margin-desktop py-16">
-            <div className="flex items-center justify-between border-b-2 border-on-surface pb-4 mb-12">
-              <h2 className="font-headline-md text-headline-md text-on-surface uppercase">
+          <div className="md:max-w-[81%] max-w-full mx-auto px-margin-desktop py-16">
+            <div className="flex items-center justify-between border-b-2 border-on-surface pb-4 mb-12 px-2">
+              <h2 className="font-headline-md sm:text-headline-md text-xl font-semibold text-on-surface uppercase">
                 HARDWARE_PARAMETERS
               </h2>
               <span className="font-data-mono text-data-mono text-outline uppercase">

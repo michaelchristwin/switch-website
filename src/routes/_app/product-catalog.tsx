@@ -160,7 +160,7 @@ function RouteComponent() {
                   src="/assets/maxwell.png"
                 />
                 <div className="absolute inset-0 z-10 grid place-items-center bg-on-surface/60">
-                  <div className="border-3 border-red-500 bg-on-surface/85 w-[60%] flex justify-center items-center h-15 font-label-caps text-lg font-semibold uppercase tracking-[0.2em] text-white">
+                  <div className="border-3 border-red-500 bg-on-surface/85 w-[60%] flex justify-center items-center h-15 font-label-caps md:text-lg text-[15px] font-semibold uppercase tracking-[0.2em] text-white">
                     <span>Out of stock</span>
                   </div>
                 </div>
@@ -171,17 +171,17 @@ function RouteComponent() {
       </section>
 
       <section className="bg-primary px-margin-desktop py-20">
-        <div className="mx-auto flex w-full max-w-[81%] flex-col justify-between gap-8 lg:flex-row lg:items-end">
-          <div className="w-[60%]">
-            <span className="font-label-caps text-sm uppercase tracking-widest">
+        <div className="mx-auto w-full max-w-[81%] grid md:grid-cols-5 grid-cols-1 justify-between gap-8 lg:flex-row lg:items-end">
+          <div className="md:col-span-3 col-span-1">
+            <span className="font-label-caps text-sm uppercase tracking-widest text-secondary-fixed">
               Start a conversation
             </span>
-            <h2 className="mt-4 font-body-base text-5xl leading-normal text-headline-md text-on-primary">
+            <h2 className="mt-4 font-body-base lg:text-5xl md:text-4xl text-3xl leading-normal text-headline-md text-on-primary">
               Planning an energy project? Let's specify the right meter.
             </h2>
           </div>
           <a
-            className="w-fit text-sm bg-secondary px-6 py-4 font-label-caps text-label-caps text-on-secondary flex gap-2 justify-center items-center hover:translate-y-1 transition-transform shadow-[4px_4px_0px_0px_var(--color-on-secondary-fixed-variant)] hover:shadow-none"
+            className="w-fit md:col-span-2 col-span-1 mx-auto text-sm bg-secondary px-6 py-4 font-label-caps text-label-caps text-on-secondary flex gap-2 justify-center items-center hover:translate-y-1 transition-transform shadow-[4px_4px_0px_0px_var(--color-on-secondary-fixed-variant)] hover:shadow-none"
             href={whatsappUrl}
             rel="noreferrer"
             target="_blank"

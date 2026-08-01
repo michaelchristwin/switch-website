@@ -24,7 +24,7 @@ function Home() {
           <div className="absolute top-margin-desktop right-margin-desktop crosshair crosshair-tr pointer-events-none"></div>
           <div className="absolute bottom-margin-desktop left-margin-desktop crosshair crosshair-bl pointer-events-none"></div>
           <div className="absolute bottom-margin-desktop right-margin-desktop crosshair crosshair-br pointer-events-none"></div>
-          <div className="max-w-[81%] mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 pt-20">
+          <div className="max-w-[81%] mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 py-20">
             <div className="col-span-1 lg:col-span-5 flex flex-col justify-center space-y-8 relative md:mx-auto">
               <div>
                 <h1 className="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">
@@ -70,7 +70,7 @@ function Home() {
               playsInline
               loop
               preload="auto"
-              className="col-span-1 lg:col-span-7 relative rounded-2xl aspect-video shadow-lg md:mx-auto"
+              className="col-span-1 md:col-span-7 relative rounded-xl aspect-video shadow-lg md:mx-auto"
             >
               <source
                 src="https://res.cloudinary.com/dga4ze3p2/video/upload/v1785399810/about_cumulus_intro.mp4"
