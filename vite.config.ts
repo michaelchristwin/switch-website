@@ -4,15 +4,22 @@ import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
-import { cloudflare } from '@cloudflare/vite-plugin'
+// import { cloudflare } from '@cloudflare/vite-plugin'
 
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
   plugins: [
     devtools(),
-    cloudflare({ viteEnvironment: { name: 'ssr' } }),
+    // cloudflare({ viteEnvironment: { name: 'ssr' } }),
     tailwindcss(),
-    tanstackStart(),
+    tanstackStart({
+      prerender: {
+        enabled: true,
+        crawlLinks: true,
+        autoStaticPathsDiscovery: true, // auto-discovers static routes
+        concurrency: 14,
+      },
+    }),
     viteReact(),
     babel({ presets: [reactCompilerPreset()] }),
   ],
