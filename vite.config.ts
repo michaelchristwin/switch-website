@@ -17,6 +17,10 @@ const config = defineConfig({
         autoStaticPathsDiscovery: true, // auto-discovers static routes
         concurrency: 14,
       },
+      sitemap: {
+        enabled: true,
+        host: 'https://whynotswitch.com',
+      },
     }),
     viteReact(),
     babel({ presets: [reactCompilerPreset()] }),
