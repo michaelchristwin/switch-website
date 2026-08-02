@@ -93,7 +93,7 @@ function Home() {
                 Navigating unpredictable grid infrastructure requires resilient
                 hardware.
               </h2>
-              <p className="font-body-base text-body-base text-surface-container-highest max-w-md opacity-80">
+              <p className="font-label-caps text-sm text-surface-container-highest max-w-md opacity-80">
                 Voltage fluctuations and unreliable metering lead to revenue
                 loss and hardware failure. Cumulus is engineered specifically
                 for the harsh realities of the African power sector.
@@ -359,14 +359,14 @@ function Home() {
           </div>
         </section>
 
-        <section className="w-full py-24 bg-surface">
+        <section className="w-full py-24 bg-surface" id="faq">
           <div className="max-w-4xl mx-auto px-margin-desktop">
             <div className="text-center mb-16">
               <h2 className="font-headline-md text-headline-md text-on-surface">
                 Technical Briefing
               </h2>
               <p className="font-data-mono text-data-mono text-outline mt-2">
-                COMMON_QUERIES // FIELD_DEPLOYMENT
+                COMMON QUERIES // FIELD_DEPLOYMENT
               </p>
             </div>
             <div className="flex flex-col border-t border-outline-variant">
@@ -380,7 +380,7 @@ function Home() {
                     expand_more
                   </span>
                 </summary>
-                <div className="pb-6 font-body-base text-on-surface-variant pl-10 pr-4">
+                <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
                   The Cumulus series supports GSM/GPRS (2G/3G/4G fallback),
                   NB-IoT, and local optical port communication. Modbus RTU over
                   RS485 is available on extended modules.
@@ -397,7 +397,7 @@ function Home() {
                     expand_more
                   </span>
                 </summary>
-                <div className="pb-6 font-body-base text-on-surface-variant pl-10 pr-4">
+                <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
                   Yes. All our prepayment meters are fully STS (Standard
                   Transfer Specification) compliant and can seamlessly integrate
                   with any existing STS Edition 2 certified vending platform.
@@ -414,7 +414,7 @@ function Home() {
                     expand_more
                   </span>
                 </summary>
-                <div className="pb-6 font-body-base text-on-surface-variant pl-10 pr-4">
+                <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
                   Equipped with a wide operating voltage range (110V - 300V AC)
                   and robust internal surge protection (up to 6kV), it is
                   designed to survive unstable grid conditions without internal
@@ -436,7 +436,7 @@ function Home() {
               technical schematics, and pilot deployment discussions.
             </p>
             <a
-              className="bg-secondary text-inverse-on-surface font-label-caps text-label-caps px-10 py-5 flex items-center gap-3 hover:bg-secondary/80 transition-transform hover:-translate-y-1 shadow-[4px_4px_0px_0px_var(--color-on-secondary-fixed-variant)] hover:shadow-none"
+              className="bg-secondary text-inverse-on-surface font-label-caps text-smF px-10 py-5 flex items-center gap-3 hover:bg-secondary/80 transition-transform hover:-translate-y-1 shadow-[4px_4px_0px_0px_var(--color-on-secondary-fixed-variant)] hover:shadow-none"
               target="_blank"
               href="https://wa.me/2348081147003"
             >

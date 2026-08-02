@@ -5,7 +5,6 @@ export const Route = createFileRoute('/_app')({
   component: RouteComponent,
 })
 const navLinks: { path: string; slug: string }[] = [
-  { path: '/', slug: 'HOME' },
   { path: '/product-catalog', slug: 'PRODUCT CATALOG' },
   { path: '/datasheet', slug: 'DATASHEET' },
 ] as const
@@ -103,6 +102,9 @@ function RouteComponent() {
             <Link className="hover:text-primary" to="/" hash="faq">
               FAQ
             </Link>
+            <Link className="hover:text-primary" to="/" hash="demo">
+              How to install the meter
+            </Link>
           </div>
           <div className="flex flex-col items-start gap-3">
             <span className="mb-2 font-label-caps text-label-caps uppercase tracking-widest text-primary">
@@ -112,7 +114,7 @@ function RouteComponent() {
               +234 808 114 7003
             </a>
             <a className="hover:text-primary" href="tel:+2349065789011">
-              +234 906 578 9011
+              +234 906 578 7011
             </a>
             <a
               className="hover:text-primary"
@@ -129,7 +131,7 @@ function RouteComponent() {
         </div>
       </footer>
       <a
-        className="fixed bottom-8 right-8 z-100 w-14 h-14 bg-white/80 backdrop-blur-xl border border-white/40 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform group"
+        className="fixed bottom-8 right-8 z-100 w-14 h-14 bg-white backdrop-blur-xl border border-white/40 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform group"
         href="https://wa.me/2348081147003"
         target="_blank"
       >

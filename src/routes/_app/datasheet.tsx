@@ -25,7 +25,7 @@ function RouteComponent() {
               <div className="inline-flex items-center gap-2 mb-6">
                 <div className="w-2 h-2 bg-primary"></div>
                 <span className="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">
-                  TECHNICAL_SPECIFICATION_SHEET
+                  TECHNICAL SPECIFICATION SHEET
                 </span>
               </div>
               <h1 className="font-display-lg text-display-lg text-on-surface mb-4 uppercase">
@@ -35,8 +35,8 @@ function RouteComponent() {
               </h1>
               <p className="font-data-mono text-data-mono text-on-surface-variant mb-8 max-w-lg border-l-2 border-primary pl-4">
                 High-precision multi-phase smart metering node designed for
-                industrial-grade data telemetry. Features integrated RF mesh
-                networking and strict ±0.5% accuracy tolerance under peak loads.
+                industrial-grade data telemetry. Features integrated LoRaWAN
+                networking and strict ±0.1% accuracy tolerance under peak loads.
               </p>
               <div className="grid grid-cols-2 gap-4 font-data-mono text-data-mono mb-12">
                 <div className="border border-outline-variant p-4 relative crosshair crosshair-tl">
@@ -73,7 +73,7 @@ function RouteComponent() {
                 </button>
                 <a
                   className="text-on-secondary bg-secondary hover:translate-y-1 md:px-8 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center gap-2 hover:bg-on-secondary-container transition-colors group"
-                  href="https://wa.me/2349065789011"
+                  href="https://wa.me/2349065787011"
                   target="_blank"
                 >
                   <span>TECHNICAL SUPPORT</span>
@@ -237,11 +237,11 @@ function RouteComponent() {
               <div className="lg:col-span-1 space-y-8">
                 <div>
                   <h2 className="font-headline-md text-headline-md text-on-surface uppercase mb-4">
-                    SCHEMATICS_&amp;
+                    SCHEMATICS &amp;
                     <br />
                     COMPLIANCE
                   </h2>
-                  <p className="font-body-base text-body-base text-on-surface-variant">
+                  <p className="font-label-caps text-body-base text-on-surface-variant">
                     Designed for seamless integration into standard DIN
                     enclosures or surface mounting. Verified against rigorous
                     international metrology standards.
@@ -250,7 +250,7 @@ function RouteComponent() {
                 <div className="bg-surface-container p-6 border border-outline-variant relative">
                   <div className="absolute top-0 left-0 w-2 h-2 border-b border-r border-outline bg-surface"></div>
                   <h3 className="font-label-caps text-label-caps text-on-surface mb-4">
-                    CERTIFICATION_MARKS
+                    CERTIFICATION MARKS
                   </h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col items-center justify-center p-4 border border-outline bg-surface hover:border-primary transition-colors">
@@ -341,14 +341,14 @@ function RouteComponent() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#3a3e40_1px,transparent_1px),linear-gradient(to_bottom,#3a3e40_1px,transparent_1px)] bg-size-[32px_32px]"></div>
           <div className="max-w-4xl mx-auto px-margin-desktop relative z-10 text-center flex flex-col items-center">
             <span className="font-label-caps text-label-caps text-inverse-primary mb-4 block tracking-widest border border-inverse-primary px-3 py-1">
-              PROCUREMENT_&amp;_INSTALLATION
+              PROCUREMENT &amp; INSTALLATION
             </span>
             <h2 className="font-display-lg text-display-lg text-surface-container-lowest mb-6">
               READY TO DEPLOY
               <br />
               AT SCALE?
             </h2>
-            <p className="font-body-base text-body-base text-surface-variant mb-10 max-w-2xl text-center">
+            <p className="font-label-caps text-body-base text-surface-variant mb-10 max-w-2xl text-center">
               Our field engineering team is available for technical
               consultation, network topology planning, and pilot phase
               deployment support.

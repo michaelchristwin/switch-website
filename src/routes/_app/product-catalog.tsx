@@ -63,7 +63,7 @@ function RouteComponent() {
                 <h2 className="font-display-lg text-display-lg text-on-surface">
                   Cumulus
                 </h2>
-                <p className="mt-5 text-on-surface-variant">
+                <p className="mt-5 text-on-surface-variant font-label-caps">
                   Smart metering hardware designed to help decentralized energy
                   operators monitor, manage and control connected loads.
                 </p>
@@ -112,7 +112,7 @@ function RouteComponent() {
                 <h2 className="font-display-lg text-display-lg text-on-surface">
                   Maxwell
                 </h2>
-                <p className="mt-5 text-on-surface-variant">
+                <p className="mt-5 text-on-surface-variant font-label-caps">
                   Metering hardware for dependable energy measurement and
                   technical evaluation.
                 </p>
@@ -173,10 +173,10 @@ function RouteComponent() {
       <section className="bg-primary px-margin-desktop py-20">
         <div className="mx-auto w-full max-w-[81%] grid md:grid-cols-5 grid-cols-1 justify-between gap-8 lg:flex-row lg:items-end">
           <div className="md:col-span-3 col-span-1">
-            <span className="font-label-caps text-sm uppercase tracking-widest text-secondary-fixed">
+            <span className="font-label-caps text-sm uppercase tracking-widest text-white">
               Start a conversation
             </span>
-            <h2 className="mt-4 font-body-base lg:text-5xl md:text-4xl text-3xl leading-normal text-headline-md text-on-primary">
+            <h2 className="mt-4 font-label-caps lg:text-5xl md:text-4xl text-3xl leading-normal text-headline-md text-on-primary">
               Planning an energy project? Let's specify the right meter.
             </h2>
           </div>
