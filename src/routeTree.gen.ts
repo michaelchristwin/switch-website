@@ -11,7 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as AppIndexRouteImport } from './routes/_app/index'
-import { Route as AppDataSheetRouteImport } from './routes/_app/data-sheet'
+import { Route as AppDatasheetRouteImport } from './routes/_app/datasheet'
 import { Route as AppProductCatalogRouteImport } from './routes/_app/product-catalog'
 
 const AppRoute = AppRouteImport.update({
@@ -23,9 +23,9 @@ const AppIndexRoute = AppIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AppRoute,
 } as any)
-const AppDataSheetRoute = AppDataSheetRouteImport.update({
-  id: '/data-sheet',
-  path: '/data-sheet',
+const AppDatasheetRoute = AppDatasheetRouteImport.update({
+  id: '/datasheet',
+  path: '/datasheet',
   getParentRoute: () => AppRoute,
 } as any)
 const AppProductCatalogRoute = AppProductCatalogRouteImport.update({
@@ -36,30 +36,30 @@ const AppProductCatalogRoute = AppProductCatalogRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
-  '/data-sheet': typeof AppDataSheetRoute
+  '/datasheet': typeof AppDatasheetRoute
   '/product-catalog': typeof AppProductCatalogRoute
 }
 export interface FileRoutesByTo {
-  '/data-sheet': typeof AppDataSheetRoute
+  '/datasheet': typeof AppDatasheetRoute
   '/product-catalog': typeof AppProductCatalogRoute
   '/': typeof AppIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppRouteWithChildren
-  '/_app/data-sheet': typeof AppDataSheetRoute
+  '/_app/datasheet': typeof AppDatasheetRoute
   '/_app/product-catalog': typeof AppProductCatalogRoute
   '/_app/': typeof AppIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/data-sheet' | '/product-catalog'
+  fullPaths: '/' | '/datasheet' | '/product-catalog'
   fileRoutesByTo: FileRoutesByTo
-  to: '/data-sheet' | '/product-catalog' | '/'
+  to: '/datasheet' | '/product-catalog' | '/'
   id:
     | '__root__'
     | '/_app'
-    | '/_app/data-sheet'
+    | '/_app/datasheet'
     | '/_app/product-catalog'
     | '/_app/'
   fileRoutesById: FileRoutesById
@@ -84,11 +84,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppIndexRouteImport
       parentRoute: typeof AppRoute
     }
-    '/_app/data-sheet': {
-      id: '/_app/data-sheet'
-      path: '/data-sheet'
-      fullPath: '/data-sheet'
-      preLoaderRoute: typeof AppDataSheetRouteImport
+    '/_app/datasheet': {
+      id: '/_app/datasheet'
+      path: '/datasheet'
+      fullPath: '/datasheet'
+      preLoaderRoute: typeof AppDatasheetRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/product-catalog': {
@@ -102,13 +102,13 @@ declare module '@tanstack/react-router' {
 }
 
 interface AppRouteChildren {
-  AppDataSheetRoute: typeof AppDataSheetRoute
+  AppDatasheetRoute: typeof AppDatasheetRoute
   AppProductCatalogRoute: typeof AppProductCatalogRoute
   AppIndexRoute: typeof AppIndexRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
-  AppDataSheetRoute: AppDataSheetRoute,
+  AppDatasheetRoute: AppDatasheetRoute,
   AppProductCatalogRoute: AppProductCatalogRoute,
   AppIndexRoute: AppIndexRoute,
 }

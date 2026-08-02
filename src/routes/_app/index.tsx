@@ -284,10 +284,10 @@ function Home() {
                 </span>
               </div>
               <Link
-                to="/data-sheet"
+                to="/datasheet"
                 className="w-fit mt-4 bg-transparent border border-on-surface text-on-surface font-label-caps text-sm px-6 py-3 hover:bg-on-surface hover:text-surface transition-colors flex items-center gap-2"
               >
-                <span>VIEW DATA SHEET</span>
+                <span>VIEW DATASHEET</span>
                 <span className="material-symbols-outlined text-sm">
                   open_in_new
                 </span>

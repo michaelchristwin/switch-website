@@ -7,7 +7,7 @@ export const Route = createFileRoute('/_app')({
 const navLinks: { path: string; slug: string }[] = [
   { path: '/', slug: 'HOME' },
   { path: '/product-catalog', slug: 'PRODUCT CATALOG' },
-  { path: '/data-sheet', slug: 'DATA SHEET' },
+  { path: '/datasheet', slug: 'DATASHEET' },
 ] as const
 
 function RouteComponent() {
@@ -97,8 +97,8 @@ function RouteComponent() {
             <Link className="hover:text-primary" to="/product-catalog">
               Product catalog
             </Link>
-            <Link className="hover:text-primary" to="/data-sheet">
-              Data sheet
+            <Link className="hover:text-primary" to="/datasheet">
+              Datasheet
             </Link>
             <Link className="hover:text-primary" to="/" hash="faq">
               FAQ

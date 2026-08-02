@@ -2,7 +2,7 @@ import { IsometricProjection } from '#/assets/schematics'
 import { WhatsApp } from '#/components/icons/WhatsApp'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/_app/data-sheet')({
+export const Route = createFileRoute('/_app/datasheet')({
   component: RouteComponent,
   head: () => ({
     meta: [{ title: 'Data Sheet | Switch' }],

@@ -71,9 +71,9 @@ function RouteComponent() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
                     className="bg-on-surface px-5 py-4 font-label-caps text-sm text-surface transition-transform hover:-translate-y-0.5 flex justify-center items-center gap-2"
-                    to="/data-sheet"
+                    to="/datasheet"
                   >
-                    <span>View data sheet</span>
+                    <span>View datasheet</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
