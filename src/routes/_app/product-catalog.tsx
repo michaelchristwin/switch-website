@@ -6,8 +6,7 @@ export const Route = createFileRoute('/_app/product-catalog')({
   head: () => ({ meta: [{ title: 'Products | Switch Electric' }] }),
 })
 
-const whatsappUrl =
-  'https://wa.me/2348081147003?text=Hi%20Switch%20Electric%2C%20I%27d%20like%20pricing%20and%20availability%20for%20Cumulus.'
+const whatsappUrl = 'https://wa.me/2348081147003'
 
 const tags = {
   cumulus: ['Smart metering', 'IoT monitoring', 'Load control'],
@@ -63,7 +62,7 @@ function RouteComponent() {
                 <h2 className="font-display-lg text-display-lg text-on-surface">
                   Cumulus
                 </h2>
-                <p className="mt-5 text-on-surface-variant font-label-caps">
+                <p className="mt-5 text-on-surface-variant font-data-mono text-data-mono text-[15px]">
                   Smart metering hardware designed to help decentralized energy
                   operators monitor, manage and control connected loads.
                 </p>
@@ -112,7 +111,7 @@ function RouteComponent() {
                 <h2 className="font-display-lg text-display-lg text-on-surface">
                   Maxwell
                 </h2>
-                <p className="mt-5 text-on-surface-variant font-label-caps">
+                <p className="mt-5 text-on-surface-variant font-data-mono text-data-mono text-[15px]">
                   Metering hardware for dependable energy measurement and
                   technical evaluation.
                 </p>
@@ -176,7 +175,7 @@ function RouteComponent() {
             <span className="font-label-caps text-sm uppercase tracking-widest text-white">
               Start a conversation
             </span>
-            <h2 className="mt-4 font-label-caps lg:text-5xl md:text-4xl text-3xl leading-normal text-headline-md text-on-primary">
+            <h2 className="mt-4 font-display-lg text-display-lg text-on-primary">
               Planning an energy project? Let's specify the right meter.
             </h2>
           </div>

@@ -18,7 +18,60 @@ export const Route = createRootRoute({
       },
       {
         name: 'description',
-        content: '',
+        content:
+          'Switch has introduced the first smart meter designed for web3 solar projects. Our meters enable individuals to monetize solar power, which in turn helps decentralize energy grid, while ensuring their data is transparent, verifiable and secures',
+      },
+      {
+        name: 'google-site-verification',
+        content: '7Md7CnryEOcKgtedcz1Sm9ytVy_VZMDuVBJfS8D-JkU',
+      },
+      {
+        name: 'author',
+        content: 'Switch Electric',
+      },
+      {
+        property: 'og:title',
+        content: 'Switch Electric',
+      },
+      {
+        property: 'og:description',
+        content: 'Smart metering hardware provider',
+      },
+      {
+        property: 'og:url',
+        content: 'https://www.whynotswitch.com/',
+      },
+      {
+        property: 'og:site_name',
+        content: 'Switch Electric',
+      },
+      {
+        property: 'og:locale',
+        content: 'en_US',
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        name: 'twitter:card',
+        content: 'website',
+      },
+      {
+        name: 'twitter:site',
+        content: '@whynotswitch',
+      },
+      {
+        name: 'twitter:creator',
+        content: '@@whynotswitch',
+      },
+      {
+        name: 'twitter:title',
+        content: 'Switch Electric',
+      },
+      {
+        name: 'twitter:description',
+        content: 'Smart metering hardware provider',
       },
     ],
     links: [
@@ -55,6 +108,16 @@ export const Route = createRootRoute({
       {
         href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0',
         rel: 'stylesheet',
+      },
+      {
+        rel: 'canonical',
+        href: 'https://www.whynotswitch.com/',
+      },
+    ],
+    scripts: [
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-ZVCXJTT66C',
       },
     ],
   }),
