@@ -137,7 +137,7 @@ function Home() {
                 </div>
               </div>
               <div className="font-label-caps text-label-caps text-outline hidden md:block">
-                VIEW_01 // VIEW_02
+                VIEW 01 // VIEW 02
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

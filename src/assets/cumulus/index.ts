@@ -1,0 +1,5 @@
+export { default as Cumulus1 } from './cumulus1.jpeg'
+export { default as Cumulus2 } from './cumulus2.jpeg'
+export { default as Cumulus3 } from './cumulus3.jpeg'
+export { default as Cumulus4 } from './cumulus4.jpeg'
+export { default as Cumulus5 } from './cumulus5.jpeg'

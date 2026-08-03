@@ -3,7 +3,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/_app/product-catalog')({
   component: RouteComponent,
-  head: () => ({ meta: [{ title: 'Products | Switch Electric' }] }),
+  head: () => ({ meta: [{ title: 'Product Catalog' }] }),
 })
 
 const whatsappUrl = 'https://wa.me/2348081147003'
