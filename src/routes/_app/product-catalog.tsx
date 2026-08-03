@@ -19,9 +19,22 @@ function RouteComponent() {
       <section className="border-b border-outline-variant bg-surface-container-low px-margin-desktop py-20 lg:py-28">
         <div className="mx-auto w-full max-w-[81%]">
           <div className="mb-6 flex items-center gap-3 font-label-caps text-label-caps uppercase tracking-widest">
-            <span className="grid size-8 place-items-center border border-on-surface text-primary">
-              P/01
-            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-box-icon lucide-box"
+            >
+              <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg>
             Product catalog
           </div>
           <h1 className="font-display-lg text-display-lg uppercase text-on-surface">
@@ -55,7 +68,7 @@ function RouteComponent() {
                 />
               </div>
               <div className="flex flex-col justify-center p-8 lg:p-14">
-                <div className="mb-10 flex items-center gap-2 font-data-mono text-[10px] font-bold uppercase tracking-widest">
+                <div className="mb-10 flex items-center gap-2 font-data-mono text-[12px] font-bold uppercase tracking-widest">
                   <span className="size-2 rounded-full bg-secondary" />
                   Current product
                 </div>
@@ -104,7 +117,7 @@ function RouteComponent() {
 
             <article className="grid overflow-hidden border border-on-surface bg-surface md:grid-cols-2">
               <div className="order-2 flex flex-col justify-center border-t border-on-surface p-8 md:order-1 md:border-t-0 md:border-r lg:p-14">
-                <div className="mb-10 flex items-center gap-2 font-data-mono text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
+                <div className="mb-10 flex items-center gap-2 font-data-mono text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
                   <span className="size-2 rounded-full bg-outline" />
                   Currently unavailable
                 </div>
