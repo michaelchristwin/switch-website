@@ -1,8 +1,16 @@
-import { ExplodedView, FrontView } from '#/assets/schematics'
+import {
+  Cumulus1,
+  Cumulus2,
+  Cumulus3,
+  Cumulus4,
+  Cumulus5,
+} from '#/assets/cumulus'
+import Carousel from '#/components/Carousel'
 import { WhatsApp } from '#/components/icons/WhatsApp'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useEffect, useRef } from 'react'
 
+const cumulusImages = [Cumulus1, Cumulus2, Cumulus3, Cumulus4, Cumulus5]
 export const Route = createFileRoute('/_app/')({ component: Home })
 
 function Home() {
@@ -140,7 +148,7 @@ function Home() {
                 VIEW 01 // VIEW 02
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative aspect-square bg-surface border border-outline group p-8 flex items-center justify-center">
                 <div className="absolute top-2 left-2 font-data-mono text-[10px] text-outline">
                   FIG. 1 / FRONT VIEW
@@ -184,7 +192,18 @@ function Home() {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
+            <Carousel>
+              {cumulusImages.map((image, i) => (
+                <div key={image} className="w-80 md:w-100 h-90 md:h-80">
+                  <img
+                    src={image}
+                    alt={`Cumulus ${i + 1}`}
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </Carousel>
           </div>
         </section>
 
