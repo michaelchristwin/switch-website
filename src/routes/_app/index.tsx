@@ -195,7 +195,7 @@ function Home() {
             </div> */}
             <Carousel>
               {cumulusImages.map((image, i) => (
-                <div key={image} className="w-80 md:w-100 h-90 md:h-80">
+                <div key={image} className="w-100 md:w-170 h-fit">
                   <img
                     src={image}
                     alt={`Cumulus ${i + 1}`}
