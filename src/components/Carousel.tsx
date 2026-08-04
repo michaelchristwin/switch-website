@@ -88,6 +88,7 @@ export default function Carousel({ children, className = '' }: CarouselProps) {
       <div className="mt-6 flex justify-end gap-2">
         <button
           type="button"
+          suppressHydrationWarning
           onClick={() => scrollByStep('left')}
           disabled={!canScrollLeft}
           aria-label="Scroll left"
@@ -113,6 +114,7 @@ export default function Carousel({ children, className = '' }: CarouselProps) {
         <button
           type="button"
           onClick={() => scrollByStep('right')}
+          suppressHydrationWarning
           disabled={!canScrollRight}
           aria-label="Scroll right"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition

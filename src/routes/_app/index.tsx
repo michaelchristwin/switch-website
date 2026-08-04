@@ -10,7 +10,7 @@ import { WhatsApp } from '#/components/icons/WhatsApp'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useEffect, useRef } from 'react'
 
-const cumulusImages = [Cumulus1, Cumulus2, Cumulus3, Cumulus4, Cumulus5]
+const cumulusImages = [Cumulus5, Cumulus4, Cumulus3, Cumulus2, Cumulus1]
 export const Route = createFileRoute('/_app/')({ component: Home })
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
     introVideo.current.playbackRate = 0.6
     if (!installationVideo.current) return
     installationVideo.current.playbackRate = 0.5
-  }, [introVideo])
+  }, [])
   return (
     <main className="w-full pt-20 min-h-screen">
       <div className="flex flex-col w-full">
@@ -223,12 +223,11 @@ function Home() {
                   <span className="material-symbols-outlined">bolt</span>
                 </div>
                 <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
-                  100A Max Current
+                  High Accuracy
                 </h3>
                 <p className="font-body-base text-sm text-on-surface-variant group-hover:text-white">
-                  Designed to handle significant load variations without
-                  tripping, ensuring continuous supply for high-demand
-                  residential and light-commercial applications.
+                  ±0.1% active energy, ±0.2% reactive energy over 6000:1 dynamic
+                  range
                 </p>
               </div>
 
@@ -237,12 +236,11 @@ function Home() {
                   <span className="material-symbols-outlined">security</span>
                 </div>
                 <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
-                  Advanced Theft Detection
+                  Polyphase Metering
                 </h3>
                 <p className="font-body-base text-sm text-on-surface-variant group-hover:text-white">
-                  Multi-sensor tamper detection logs magnetic interference,
-                  cover removal, and reverse current flow, instantly reporting
-                  anomalies to the central dashboard.
+                  3-Phase 4-Wire direct connect up to 300A, SIngle pahse up to
+                  80A
                 </p>
               </div>
 
@@ -253,12 +251,10 @@ function Home() {
                   </span>
                 </div>
                 <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
-                  Predictive Maintenance
+                  LoRaWANⓇ Wireless
                 </h3>
                 <p className="font-body-base text-sm text-on-surface-variant group-hover:text-white">
-                  Machine learning algorithms analyze power quality data locally
-                  to predict relay wear and capacitor degradation before
-                  catastrophic failure.
+                  Long range Sub-GHz up to 15km rural AES-128 encrypted.
                 </p>
               </div>
 
@@ -267,12 +263,10 @@ function Home() {
                   <span className="material-symbols-outlined">sync_alt</span>
                 </div>
                 <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
-                  Bi-directional Metering
+                  IP54 Enclosure
                 </h3>
                 <p className="font-body-base text-sm text-on-surface-variant group-hover:text-white">
-                  Natively supports solar net-metering. Accurately records
-                  imported and exported energy on separate registers for precise
-                  billing.
+                  Indoor/Semi-Sheltered rated, -20°C to ±80°C operating range.
                 </p>
               </div>
             </div>
@@ -281,12 +275,12 @@ function Home() {
 
         <section
           className="w-full py-24 bg-surface-container-highest relative"
-          id="demo"
+          id="installation-guide"
         >
           <div className="max-w-[81%] mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="col-span-1 lg:col-span-4 flex flex-col gap-6">
               <h2 className="font-headline-md text-headline-md text-on-surface">
-                Data Visibility at Scale
+                Installation Guide
               </h2>
               <p className="font-body-base text-body-base text-on-surface-variant">
                 Monitor fleet health, track revenue recovery, and isolate tamper

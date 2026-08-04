@@ -1,5 +1,8 @@
-// import { IsometricProjection } from '#/assets/schematics'
-import { BottomView, Connection } from '#/assets/schematics'
+import {
+  BottomView,
+  Connection,
+  IsometricProjection,
+} from '#/assets/schematics'
 import { WhatsApp } from '#/components/icons/WhatsApp'
 import { createFileRoute } from '@tanstack/react-router'
 
@@ -228,13 +231,120 @@ function RouteComponent() {
             </div>
           </div>
         </section>
+        <section
+          className="w-full bg-surface py-16 border-b border-outline-variant overflow-hidden relative"
+          id="engineering-drawings"
+        >
+          <div className="max-w-[81%] mx-auto px-margin-desktop">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              <div className="lg:col-span-1 space-y-8">
+                <div>
+                  <h2 className="font-headline-md text-headline-md text-on-surface uppercase mb-4">
+                    SCHEMATICS &amp;
+                    <br />
+                    COMPLIANCE
+                  </h2>
+                  <p className="font-label-caps text-body-base text-on-surface-variant">
+                    Designed for seamless integration into standard DIN
+                    enclosures or surface mounting. Verified against rigorous
+                    international metrology standards.
+                  </p>
+                </div>
+                <div className="bg-surface-container p-6 border border-outline-variant relative">
+                  <div className="absolute top-0 left-0 w-2 h-2 border-b border-r border-outline bg-surface"></div>
+                  <h3 className="font-label-caps text-label-caps text-on-surface mb-4">
+                    CERTIFICATION MARKS
+                  </h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex flex-col items-center justify-center p-4 border border-outline bg-surface hover:border-primary transition-colors">
+                      <span className="font-display-lg text-[24px] font-bold text-on-surface-variant leading-none mb-1">
+                        CE
+                      </span>
+                      <span className="font-data-mono text-[8px] text-outline">
+                        EN 50470-1/3
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center justify-center p-4 border border-outline bg-surface hover:border-primary transition-colors">
+                      <span className="font-display-lg text-[24px] font-bold text-on-surface-variant leading-none mb-1">
+                        MID
+                      </span>
+                      <span className="font-data-mono text-[8px] text-outline">
+                        DIR 2014/32/EU
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center justify-center p-4 border border-outline bg-surface hover:border-primary transition-colors">
+                      <span className="material-symbols-outlined text-[28px] text-on-surface-variant mb-1">
+                        verified_user
+                      </span>
+                      <span className="font-data-mono text-[8px] text-outline">
+                        DLMS CERT
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center justify-center p-4 border border-outline bg-surface hover:border-primary transition-colors">
+                      <span className="material-symbols-outlined text-[28px] text-on-surface-variant mb-1">
+                        shield
+                      </span>
+                      <span className="font-data-mono text-[8px] text-outline">
+                        IP54 RATED
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="lg:col-span-2 relative">
+                {/* <!-- Conceptual Blueprint Image placeholder --> */}
+                <div className="w-full aspect-video border border-outline p-2 bg-surface-container-low relative group">
+                  {/* <!-- Top right tab --> */}
+                  <div className="absolute -top-px right-4 bg-outline text-surface-container-lowest font-label-caps z-10 text-[9px] px-2 py-0.5 uppercase">
+                    ISOMETRIC PROJECTION
+                  </div>
+                  <div className="w-full h-full border border-dashed border-outline-variant bg-surface relative flex items-center justify-center overflow-hidden">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-multiply"
+                      data-alt="A highly detailed, technical blueprint-style line drawing of a 3-phase electric meter, shown in multiple orthographic views (front, side, top) on a pale industrial grid background, rendered in thin charcoal lines with measurement callouts, strictly adhering to an engineering schematic aesthetic."
+                      style={{
+                        backgroundImage: `url(${IsometricProjection})`,
+                      }}
+                    ></div>
+                    {/* <!-- Overlay dimensions text for realism --> */}
+                    <div className="absolute top-1/4 left-1/4 font-data-mono text-[10px] text-primary -rotate-90 origin-left">
+                      W: 175mm
+                    </div>
+                    <div className="absolute bottom-1/4 right-1/3 font-data-mono text-[10px] text-primary">
+                      D: 72mm
+                    </div>
+                    {/* <!-- Hover scan line effect --> */}
+                    <div className="absolute inset-0 w-full h-0.5 bg-primary/20 opacity-0 group-hover:opacity-100 group-hover:animate-scan"></div>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center mt-4">
+                  <span className="font-data-mono text-[10px] text-outline">
+                    SCALE: 1:2 (A4)
+                  </span>
+                  <div className="flex gap-2">
+                    <button className="w-8 h-8 flex items-center justify-center border border-outline text-on-surface hover:bg-surface-variant">
+                      <span className="material-symbols-outlined text-sm">
+                        zoom_in
+                      </span>
+                    </button>
+                    <button className="w-8 h-8 flex items-center justify-center border border-outline text-on-surface hover:bg-surface-variant">
+                      <span className="material-symbols-outlined text-sm">
+                        download
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* <!-- Engineering Drawings & Certifications --> */}
         <section className="w-full py-24 bg-surface-bright relative">
           <div className="max-w-[81%] mx-auto px-margin-desktop">
             <div className="flex justify-between items-end mb-12 border-b border-outline-variant pb-4">
               <div>
                 <h2 className="font-headline-md text-headline-md text-on-surface">
-                  Hardware Modules
+                  Wiring Diagram
                 </h2>
                 <div className="font-data-mono text-data-mono text-on-surface-variant mt-2">
                   CUMULUS METERING UNIT

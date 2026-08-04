@@ -9,7 +9,7 @@ export const Route = createFileRoute('/_app/product-catalog')({
 const whatsappUrl = 'https://wa.me/2348081147003'
 
 const tags = {
-  cumulus: ['Smart metering', 'IoT monitoring', 'Load control'],
+  cumulus: ['35mm DIN rail x1', 'Modified truss screws x4', 'LoRa Antenna x1'],
   maxwell: ['Energy metering', 'Technical data', 'Field hardware'],
 }
 
@@ -79,7 +79,12 @@ function RouteComponent() {
                   Smart metering hardware designed to help decentralized energy
                   operators monitor, manage and control connected loads.
                 </p>
-                <TagList _tags={tags.cumulus} />
+                <div className="grid grid-cols-[auto_1fr] items-center">
+                  <div className="mt-6 flex flex-wrap font-data-mono font-semibold text-[12px] uppercase">
+                    <span className="px-3 py-2">Ships With</span>
+                  </div>
+                  <TagList _tags={tags.cumulus} />
+                </div>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
                     className="bg-on-surface px-5 py-4 font-label-caps text-sm text-surface transition-transform hover:-translate-y-0.5 flex justify-center items-center gap-2"
@@ -128,7 +133,12 @@ function RouteComponent() {
                   Metering hardware for dependable energy measurement and
                   technical evaluation.
                 </p>
-                <TagList _tags={tags.maxwell} />
+                <div className="grid grid-cols-[auto_1fr] items-center">
+                  <div className="mt-6 flex flex-wrap font-data-mono font-semibold text-[12px] uppercase">
+                    <span className="px-3 py-2">Ships With</span>
+                  </div>
+                  <TagList _tags={tags.maxwell} />
+                </div>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
                     className="bg-on-surface px-5 py-4 font-label-caps text-sm text-surface transition-transform hover:-translate-y-0.5 flex justify-center items-center gap-2"
@@ -209,7 +219,7 @@ function RouteComponent() {
 
 function TagList({ _tags }: { _tags: Array<string> }) {
   return (
-    <div className="mt-6 flex flex-wrap gap-2 font-data-mono text-[10px] uppercase">
+    <div className="mt-6 flex flex-wrap gap-2 font-data-mono text-[11px] uppercase flex-1">
       {_tags.map((tag) => (
         <span className="border border-outline-variant px-3 py-2" key={tag}>
           {tag}

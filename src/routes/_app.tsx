@@ -6,7 +6,6 @@ export const Route = createFileRoute('/_app')({
 })
 const navLinks: { path: string; slug: string }[] = [
   { path: '/product-catalog', slug: 'PRODUCT CATALOG' },
-  { path: '/datasheet', slug: 'DATASHEET' },
 ] as const
 
 function RouteComponent() {
@@ -21,24 +20,25 @@ function RouteComponent() {
               src={SwitchLogo}
             />
           </Link>
-          <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                className="font-label-caps text-sm transition-colors tracking-widest "
-                activeProps={{
-                  className: 'text-secondary border-b-2 border-secondary',
-                }}
-                inactiveProps={{
-                  className: 'text-on-surface-variant hover:text-secondary',
-                }}
-                to={link.path}
-              >
-                {link.slug}
-              </Link>
-            ))}
-          </nav>
-          <div className="flex items-center gap-4">
+
+          <div className="flex items-center gap-5 md:gap-7">
+            <nav className="hidden lg:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  className="font-label-caps text-sm transition-colors tracking-widest "
+                  activeProps={{
+                    className: 'text-secondary border-b-2 border-secondary',
+                  }}
+                  inactiveProps={{
+                    className: 'text-on-surface-variant hover:text-secondary',
+                  }}
+                  to={link.path}
+                >
+                  {link.slug}
+                </Link>
+              ))}
+            </nav>
             <a
               className="bg-secondary text-on-secondary px-6 py-3 font-label-caps text-sm flex items-center gap-2 hover:bg-on-secondary-container transition-all"
               target="_blank"
@@ -102,8 +102,12 @@ function RouteComponent() {
             <Link className="hover:text-primary" to="/" hash="faq">
               FAQ
             </Link>
-            <Link className="hover:text-primary" to="/" hash="demo">
-              How to install the meter
+            <Link
+              className="hover:text-primary"
+              to="/"
+              hash="installation-guide"
+            >
+              Installation Guide
             </Link>
           </div>
           <div className="flex flex-col items-start gap-3">
