@@ -1,10 +1,7 @@
-import {
-  BottomView,
-  Connection,
-  IsometricProjection,
-} from '#/assets/schematics'
+import { BottomView, Connection, MeterLabeling } from '#/assets/schematics'
 import { WhatsApp } from '#/components/icons/WhatsApp'
 import { createFileRoute, Link } from '@tanstack/react-router'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '#/components/ui/tabs'
 
 export const Route = createFileRoute('/_app/datasheet')({
   component: RouteComponent,
@@ -14,6 +11,30 @@ export const Route = createFileRoute('/_app/datasheet')({
 })
 
 function RouteComponent() {
+  const threePhaseSteps = [
+    'Port 5 activated for voltage probes and external CT sensors',
+    'External CT: primary 1-300A, secondary 5A output only',
+    'Signal control pins activated for external Contactor/ATS',
+    'Internally connected to SSR control signal',
+    'Supports 3-Phase 4-Wire direct connect up to 300A',
+  ]
+
+  const singlePhaseSteps = [
+    'Use Ports 3 (IN) and 4 (OUT)',
+    '25mm cable glands - max two 16mm conductors per gland',
+    'Live IN → Neutral IN Neutral OUT → Live OUT',
+    'Inbuilt SSR rated at 80A (input to output)',
+    'Inbuilt CT sensor no external CT required',
+  ]
+  const parts = [
+    'LoRaWAN antenna port - install before power on',
+    'LED Displays (Power, Status, Relay, COMM indicators)',
+    'Single Phase IN via 25mm cable gland (Live & Neutral)',
+    'Single Phase OUT via 25mm cable gland (Live & Neutral)',
+    'Polyphse Ports (see wiring diagram)',
+    'Ventilation slot - maintain clearance',
+    'DIN Rail Mount',
+  ]
   return (
     <main className="w-full pt-20 min-h-screen">
       <div className="flex flex-col w-full relative">
@@ -231,56 +252,7 @@ function RouteComponent() {
             </div>
           </div>
         </section>
-        <section
-          className="w-full py-24 bg-surface-container-highest relative"
-          id="installation-guide"
-        >
-          <div className="max-w-[81%] mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="col-span-1 lg:col-span-4 flex flex-col gap-6">
-              <h2 className="font-headline-md text-headline-md text-on-surface">
-                Installation Guide
-              </h2>
-              <p className="font-body-base text-body-base text-on-surface-variant">
-                Monitor fleet health, track revenue recovery, and isolate tamper
-                events in real-time through the Switch Management Dashboard.
-              </p>
-              <div className="font-data-mono text-[10px] text-outline flex flex-col gap-2 mt-4">
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 bg-secondary rounded-full"></div>{' '}
-                  LATENCY &lt; 500ms
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 bg-secondary rounded-full"></div>{' '}
-                  99.9% UPTIME SLA
-                </span>
-              </div>
-              <Link
-                to="/datasheet"
-                className="w-fit mt-4 bg-transparent border border-on-surface text-on-surface font-label-caps text-sm px-6 py-3 hover:bg-on-surface hover:text-surface transition-colors flex items-center gap-2"
-              >
-                <span>VIEW DATASHEET</span>
-                <span className="material-symbols-outlined text-sm">
-                  open_in_new
-                </span>
-              </Link>
-            </div>
-            <div className="col-span-1 lg:col-span-8 relative">
-              <video
-                autoPlay
-                muted
-                playsInline
-                loop
-                preload="auto"
-                className="w-full h-auto object-cover border rounded-2xl aspect-video shadow-lg md:mx-auto"
-              >
-                <source
-                  src="https://res.cloudinary.com/dga4ze3p2/video/upload/v1785398678/how_to_install_cumulus.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-        </section>
+
         <section
           className="w-full bg-surface py-16 border-b border-outline-variant overflow-hidden relative"
           id="engineering-drawings"
@@ -290,17 +262,17 @@ function RouteComponent() {
               <div className="lg:col-span-1 space-y-8">
                 <div>
                   <h2 className="font-headline-md text-headline-md text-on-surface uppercase mb-4">
-                    SCHEMATICS &amp;
+                    LABELLING &amp;
                     <br />
-                    COMPLIANCE
+                    PORT IDENTIFICATION
                   </h2>
-                  <p className="font-label-caps text-body-base text-on-surface-variant">
-                    Designed for seamless integration into standard DIN
-                    enclosures or surface mounting. Verified against rigorous
-                    international metrology standards.
-                  </p>
                 </div>
-                <div className="bg-surface-container p-6 border border-outline-variant relative">
+                <ol className="list-decimal font-label-caps text-[16px]">
+                  {parts.map((part) => (
+                    <li key={part}>{part}</li>
+                  ))}
+                </ol>
+                {/* <div className="bg-surface-container p-6 border border-outline-variant relative">
                   <div className="absolute top-0 left-0 w-2 h-2 border-b border-r border-outline bg-surface"></div>
                   <h3 className="font-label-caps text-label-caps text-on-surface mb-4">
                     CERTIFICATION MARKS
@@ -339,21 +311,21 @@ function RouteComponent() {
                       </span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="lg:col-span-2 relative">
                 {/* <!-- Conceptual Blueprint Image placeholder --> */}
                 <div className="w-full aspect-video border border-outline p-2 bg-surface-container-low relative group">
                   {/* <!-- Top right tab --> */}
                   <div className="absolute -top-px right-4 bg-outline text-surface-container-lowest font-label-caps z-10 text-[9px] px-2 py-0.5 uppercase">
-                    ISOMETRIC PROJECTION
+                    METER LABELLING
                   </div>
                   <div className="w-full h-full border border-dashed border-outline-variant bg-surface relative flex items-center justify-center overflow-hidden">
                     <div
-                      className="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-multiply"
+                      className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-80 mix-blend-multiply"
                       data-alt="A highly detailed, technical blueprint-style line drawing of a 3-phase electric meter, shown in multiple orthographic views (front, side, top) on a pale industrial grid background, rendered in thin charcoal lines with measurement callouts, strictly adhering to an engineering schematic aesthetic."
                       style={{
-                        backgroundImage: `url(${IsometricProjection})`,
+                        backgroundImage: `url(${MeterLabeling})`,
                       }}
                     ></div>
                     {/* <!-- Overlay dimensions text for realism --> */}
@@ -385,6 +357,113 @@ function RouteComponent() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section
+          className="w-full py-24 bg-surface-container-highest relative"
+          id="installation-guide"
+        >
+          <div className="max-w-[81%] mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="col-span-1 lg:col-span-4 flex flex-col gap-6">
+              <h2 className="font-headline-md text-headline-md text-on-surface">
+                Installation Guide
+              </h2>
+              <p className="font-body-base text-body-base text-on-surface-variant">
+                Remove the metal terminal cover by unscrewing the fasteners
+                before wiring. The meter features a standard DIN rail mounting
+                groove (item 7) compatible with 35mm DIN rails. For wall
+                mounting, use the provided bracket hardware and ensure the
+                enclosure is level and securely fastened.
+              </p>
+              <Tabs className="w-75" defaultValue="three-phase">
+                <TabsList>
+                  <TabsTrigger value="single-phase">
+                    Single Phase Wiring
+                  </TabsTrigger>
+                  <TabsTrigger value="three-phase">
+                    Three Phase Wiring
+                  </TabsTrigger>
+                </TabsList>
+                <TabsContent value="single-phase">
+                  <ul className="list-disc">
+                    {singlePhaseSteps.map((step) => (
+                      <li key={step}>{step}</li>
+                    ))}
+                  </ul>
+                </TabsContent>
+                <TabsContent value="three-phase">
+                  <ul className="list-disc">
+                    {threePhaseSteps.map((step) => (
+                      <li key={step}>{step}</li>
+                    ))}
+                  </ul>
+                </TabsContent>
+              </Tabs>
+              <Link
+                to="/datasheet"
+                className="w-fit mt-4 bg-youtube transition-transform text-white font-label-caps text-sm px-6 py-3 hover:bg-red-700 hover:translate-y-1 hover:text-surface flex items-center gap-2"
+              >
+                <span>VIEW TUTORIALS</span>
+                <svg
+                  viewBox="0 -3 20 20"
+                  width={28}
+                  height={28}
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  fill="#000000"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>youtube [#168]</title>
+                    <desc>Created with Sketch.</desc> <defs> </defs>
+                    <g
+                      id="Page-1"
+                      stroke="none"
+                      strokeWidth="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="Dribbble-Light-Preview"
+                        transform="translate(-300.000000, -7442.000000)"
+                        fill="#fff"
+                      >
+                        <g
+                          id="icons"
+                          transform="translate(56.000000, 160.000000)"
+                        >
+                          <path
+                            d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289"
+                            id="youtube-[#168]"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </Link>
+            </div>
+            <div className="col-span-1 lg:col-span-8 relative">
+              <video
+                autoPlay
+                muted
+                playsInline
+                loop
+                preload="auto"
+                className="w-full h-auto object-cover border rounded-2xl aspect-video shadow-lg md:mx-auto"
+              >
+                <source
+                  src="https://res.cloudinary.com/dga4ze3p2/video/upload/v1785398678/how_to_install_cumulus.mp4"
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </div>
         </section>

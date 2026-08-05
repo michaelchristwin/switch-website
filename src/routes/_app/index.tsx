@@ -7,7 +7,7 @@ import {
 } from '#/assets/cumulus'
 import Carousel from '#/components/Carousel'
 import { WhatsApp } from '#/components/icons/WhatsApp'
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { useEffect, useRef } from 'react'
 
 const cumulusImages = [Cumulus5, Cumulus4, Cumulus3, Cumulus2, Cumulus1]
@@ -214,13 +214,27 @@ function Home() {
                 TECH_SPECS
               </span>
               <h2 className="font-headline-md text-headline-md text-on-surface mt-6">
-                Core Telemetry &amp; Protection
+                Headline Features &amp; Functionality
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant border border-outline-variant">
               <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-primary/80 transition-colors group">
                 <div className="w-12 h-12 border border-outline flex items-center justify-center bg-surface-bright group-hover:border-primary group-hover:text-primary transition-colors">
-                  <span className="material-symbols-outlined">bolt</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-circle-check-big-icon lucide-circle-check-big"
+                  >
+                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
                 </div>
                 <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
                   High Accuracy
@@ -233,7 +247,20 @@ function Home() {
 
               <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-primary/80 transition-colors group">
                 <div className="w-12 h-12 border border-outline flex items-center justify-center bg-surface-bright group-hover:border-primary group-hover:text-primary transition-colors">
-                  <span className="material-symbols-outlined">security</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-activity-icon lucide-activity"
+                  >
+                    <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" />
+                  </svg>
                 </div>
                 <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
                   Polyphase Metering
@@ -246,9 +273,24 @@ function Home() {
 
               <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-primary/80 transition-colors group">
                 <div className="w-12 h-12 border border-outline flex items-center justify-center bg-surface-bright group-hover:border-primary group-hover:text-primary transition-colors">
-                  <span className="material-symbols-outlined">
-                    network_check
-                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-radio-icon lucide-radio"
+                  >
+                    <path d="M16.247 7.761a6 6 0 0 1 0 8.478" />
+                    <path d="M19.075 4.933a10 10 0 0 1 0 14.134" />
+                    <path d="M4.925 19.067a10 10 0 0 1 0-14.134" />
+                    <path d="M7.753 16.239a6 6 0 0 1 0-8.478" />
+                    <circle cx="12" cy="12" r="2" />
+                  </svg>
                 </div>
                 <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
                   LoRaWANⓇ Wireless
@@ -260,7 +302,22 @@ function Home() {
 
               <div className="bg-surface-container-lowest p-8 flex flex-col gap-4 hover:bg-primary/80 transition-colors group">
                 <div className="w-12 h-12 border border-outline flex items-center justify-center bg-surface-bright group-hover:border-primary group-hover:text-primary transition-colors">
-                  <span className="material-symbols-outlined">sync_alt</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-shield-plus-icon lucide-shield-plus"
+                  >
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                    <path d="M9 12h6" />
+                    <path d="M12 9v6" />
+                  </svg>
                 </div>
                 <h3 className="font-data-mono text-data-mono text-on-surface text-lg group-hover:text-white">
                   IP54 Enclosure
@@ -325,62 +382,75 @@ function Home() {
           <div className="max-w-4xl mx-auto px-margin-desktop">
             <div className="text-center mb-16">
               <h2 className="font-headline-md text-headline-md text-on-surface">
-                Technical Briefing
+                Frequently Asked
               </h2>
               <p className="font-data-mono text-data-mono text-outline mt-2">
-                COMMON QUERIES // FIELD_DEPLOYMENT
+                COMMON QUERIES // USEFUL ANSWERS
               </p>
             </div>
             <div className="flex flex-col border-t border-outline-variant">
               <details className="group border-b border-outline-variant">
                 <summary className="flex justify-between items-center py-6 cursor-pointer list-none font-data-mono text-on-surface text-lg hover:text-primary transition-colors">
                   <span className="flex items-center gap-4">
-                    <span className="text-outline text-sm">01</span> What
-                    communication protocols does Cumulus support?
+                    <span className="text-outline text-sm">01</span> What kind
+                    of projects is Cumulus for?
                   </span>
                   <span className="material-symbols-outlined group-open:rotate-180 transition-transform">
                     expand_more
                   </span>
                 </summary>
                 <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
-                  The Cumulus series supports GSM/GPRS (2G/3G/4G fallback),
-                  NB-IoT, and local optical port communication. Modbus RTU over
-                  RS485 is available on extended modules.
+                  Cumulus is developed for decentralized electricity and
+                  solar-compatible metering. Share your project type and
+                  location so the team can confirm fit.
                 </div>
               </details>
 
               <details className="group border-b border-outline-variant">
                 <summary className="flex justify-between items-center py-6 cursor-pointer list-none font-data-mono text-on-surface text-lg hover:text-primary transition-colors">
                   <span className="flex items-center gap-4">
-                    <span className="text-outline text-sm">02</span> Is the
-                    meter compatible with existing STS vending systems?
+                    <span className="text-outline text-sm">02</span> Can I get
+                    pricing online?
                   </span>
                   <span className="material-symbols-outlined group-open:rotate-180 transition-transform">
                     expand_more
                   </span>
                 </summary>
                 <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
-                  Yes. All our prepayment meters are fully STS (Standard
-                  Transfer Specification) compliant and can seamlessly integrate
-                  with any existing STS Edition 2 certified vending platform.
+                  Pricing is handled by enquiry because configuration, quantity,
+                  delivery and installation needs can vary.
                 </div>
               </details>
 
               <details className="group border-b border-outline-variant">
                 <summary className="flex justify-between items-center py-6 cursor-pointer list-none font-data-mono text-on-surface text-lg hover:text-primary transition-colors">
                   <span className="flex items-center gap-4">
-                    <span className="text-outline text-sm">03</span> How does it
-                    handle severe voltage fluctuations?
+                    <span className="text-outline text-sm">03</span> Is
+                    installation support available?
                   </span>
                   <span className="material-symbols-outlined group-open:rotate-180 transition-transform">
                     expand_more
                   </span>
                 </summary>
                 <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
-                  Equipped with a wide operating voltage range (110V - 300V AC)
-                  and robust internal surge protection (up to 6kV), it is
-                  designed to survive unstable grid conditions without internal
-                  component failure.
+                  Contact Switch Electric with your site and system details to
+                  confirm the support available for your project.
+                </div>
+              </details>
+
+              <details className="group border-b border-outline-variant">
+                <summary className="flex justify-between items-center py-6 cursor-pointer list-none font-data-mono text-on-surface text-lg hover:text-primary transition-colors">
+                  <span className="flex items-center gap-4">
+                    <span className="text-outline text-sm">04</span> Where can I
+                    find technical documentation?
+                  </span>
+                  <span className="material-symbols-outlined group-open:rotate-180 transition-transform">
+                    expand_more
+                  </span>
+                </summary>
+                <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
+                  The datasheet page links to the techincal documentation (plus
+                  PDF) and installation guides.
                 </div>
               </details>
             </div>

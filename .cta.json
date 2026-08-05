@@ -1,5 +1,5 @@
 {
-  "projectName": "switch-landing",
+  "projectName": "switch-website",
   "mode": "file-router",
   "typescript": true,
   "packageManager": "pnpm",
@@ -12,10 +12,7 @@
   "intent": true,
   "routerOnly": false,
   "version": 1,
+  "addOns": true,
   "framework": "react",
-  "chosenAddOns": [
-    "eslint",
-    "nitro",
-    "compiler"
-  ]
+  "chosenAddOns": ["eslint", "compiler", "shadcn"]
 }
