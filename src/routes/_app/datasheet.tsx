@@ -74,19 +74,21 @@ function RouteComponent() {
                   <div className="text-[10px] text-outline mb-1 uppercase">
                     Max_Current
                   </div>
-                  <div className="text-on-surface">100A / Phase</div>
+                  <div className="text-on-surface">80A / Phase</div>
                 </div>
                 <div className="border border-outline-variant p-4 relative crosshair crosshair-bl">
                   <div className="text-[10px] text-outline mb-1 uppercase">
                     Comm_Protocol
                   </div>
-                  <div className="text-on-surface">Modbus RTU / Lora</div>
+                  <div className="text-on-surface">LoraWAN + MQTT</div>
                 </div>
                 <div className="border border-outline-variant p-4 relative crosshair crosshair-br">
                   <div className="text-[10px] text-outline mb-1 uppercase">
-                    Cert_Level
+                    Security_Level
                   </div>
-                  <div className="text-on-surface">IEC 62053-22</div>
+                  <div className="text-on-surface">
+                    AES-128 & ED25519 cryptography
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -145,34 +147,42 @@ function RouteComponent() {
                 <div className="flex flex-col border-t border-outline-variant">
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
                     <span className="font-data-mono text-data-mono text-on-surface-variant">
-                      Nominal Voltage (Un)
+                      Operating Voltage (L-N)
                     </span>
                     <span className="font-data-mono text-data-mono text-on-surface font-semibold">
-                      3x230/400V
+                      180-240V
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
                     <span className="font-data-mono text-data-mono text-on-surface-variant">
-                      Voltage Range
+                      Operating Voltage (L-L)
                     </span>
                     <span className="font-data-mono text-data-mono text-on-surface font-semibold">
-                      0.7Un - 1.2Un
+                      400-480V
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
                     <span className="font-data-mono text-data-mono text-on-surface-variant">
-                      Base Current (Ib)
+                      Self Consumption
                     </span>
                     <span className="font-data-mono text-data-mono text-on-surface font-semibold">
-                      5A or 10A
+                      &le; 2W
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
                     <span className="font-data-mono text-data-mono text-on-surface-variant">
-                      Maximum Current (Imax)
+                      Single phase Maximum Current (Imax)
                     </span>
                     <span className="font-data-mono text-data-mono text-on-surface font-semibold">
-                      100A
+                      80A
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
+                    <span className="font-data-mono text-data-mono text-on-surface-variant">
+                      Polyphase Maximum Current
+                    </span>
+                    <span className="font-data-mono text-data-mono text-on-surface font-semibold">
+                      300A per phase
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
@@ -183,20 +193,12 @@ function RouteComponent() {
                       50Hz / 60Hz ±5%
                     </span>
                   </div>
-                  <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
-                    <span className="font-data-mono text-data-mono text-on-surface-variant">
-                      Power Consumption
-                    </span>
-                    <span className="font-data-mono text-data-mono text-on-surface font-semibold">
-                      &lt; 2W, 10VA per phase
-                    </span>
-                  </div>
                 </div>
               </div>
               {/* <!-- Environmental & Communication --> */}
               <div>
                 <h3 className="font-label-caps text-label-caps text-primary mb-6 border-l-2 border-primary pl-3">
-                  ENVIRON_&amp;_COMM
+                  ENVIRON_&amp;_EXTERNALS
                 </h3>
                 <div className="flex flex-col border-t border-outline-variant">
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
@@ -204,7 +206,7 @@ function RouteComponent() {
                       Operating Temperature
                     </span>
                     <span className="font-data-mono text-data-mono text-on-surface font-semibold">
-                      -40°C to +70°C
+                      -20°C to +80°C
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
@@ -225,26 +227,26 @@ function RouteComponent() {
                   </div>
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
                     <span className="font-data-mono text-data-mono text-on-surface-variant">
-                      Local Communication
+                      Protection Rating
                     </span>
                     <span className="font-data-mono text-data-mono text-on-surface font-semibold">
-                      Optical Port (IEC 62056-21)
+                      IP54
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
                     <span className="font-data-mono text-data-mono text-on-surface-variant">
-                      Remote Communication
+                      CT Primary Range
                     </span>
                     <span className="font-data-mono text-data-mono text-on-surface font-semibold">
-                      Pluggable Module (GPRS/3G/4G/RF)
+                      1-300A
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
                     <span className="font-data-mono text-data-mono text-on-surface-variant">
-                      Protocol
+                      CT Secondary Range
                     </span>
                     <span className="font-data-mono text-data-mono text-on-surface font-semibold">
-                      DLMS/COSEM, Modbus RTU
+                      5A
                     </span>
                   </div>
                 </div>
@@ -328,13 +330,7 @@ function RouteComponent() {
                         backgroundImage: `url(${MeterLabeling})`,
                       }}
                     ></div>
-                    {/* <!-- Overlay dimensions text for realism --> */}
-                    <div className="absolute top-1/4 left-1/4 font-data-mono text-[10px] text-primary -rotate-90 origin-left">
-                      W: 175mm
-                    </div>
-                    <div className="absolute bottom-1/4 right-1/3 font-data-mono text-[10px] text-primary">
-                      D: 72mm
-                    </div>
+
                     {/* <!-- Hover scan line effect --> */}
                     <div className="absolute inset-0 w-full h-0.5 bg-primary/20 opacity-0 group-hover:opacity-100 group-hover:animate-scan"></div>
                   </div>

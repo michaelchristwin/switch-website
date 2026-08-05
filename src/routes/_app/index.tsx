@@ -7,7 +7,7 @@ import {
 } from '#/assets/cumulus'
 import Carousel from '#/components/Carousel'
 import { WhatsApp } from '#/components/icons/WhatsApp'
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { useEffect, useRef } from 'react'
 
 const cumulusImages = [Cumulus5, Cumulus4, Cumulus3, Cumulus2, Cumulus1]
@@ -18,6 +18,7 @@ function Home() {
   const installationVideo = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
+    import('@google/model-viewer')
     if (!introVideo.current) return
     introVideo.current.playbackRate = 0.6
     if (!installationVideo.current) return
@@ -60,15 +61,27 @@ function Home() {
                   </span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
                 </a>
-                <a
+                <Link
                   className="bg-surface text-on-surface font-label-caps text-sm px-8 py-4 flex items-center justify-center gap-3 border border-outline hover:bg-surface-container transition-colors"
-                  href="#demo"
+                  to="/"
+                  hash="3d-cumulus"
                 >
-                  SEE CUMULUS IN ACTION
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
-                </a>
+                  SEE CUMULUS IN 3D
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-rectangle-goggles-icon lucide-rectangle-goggles"
+                  >
+                    <path d="M20 6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-1.6-.8l-1.6-2.13a1 1 0 0 0-1.6 0L9.6 17.2A2 2 0 0 1 8 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" />
+                  </svg>
+                </Link>
               </div>
             </div>
             <video
@@ -102,9 +115,9 @@ function Home() {
                 hardware.
               </h2>
               <p className="font-label-caps text-sm text-surface-container-highest max-w-md opacity-80">
-                Voltage fluctuations and unreliable metering lead to revenue
-                loss and hardware failure. Cumulus is engineered specifically
-                for the harsh realities of the African power sector.
+                Unreliable monitoring lead to revenue loss and hardware failure.
+                Cumulus is engineered specifically for the harsh realities of
+                the African power sector.
               </p>
             </div>
             <div className="flex items-center">
@@ -126,7 +139,7 @@ function Home() {
                   </div>
                 </div>
                 <div className="absolute top-4 left-4 font-label-caps text-[10px] text-surface-container-highest">
-                  GRID_VOLTAGE_VARIANCE_72H
+                  DAILY_GRID_SUPPLY_VARIANCE
                 </div>
               </div>
             </div>
@@ -138,14 +151,14 @@ function Home() {
             <div className="flex justify-between items-end mb-12 border-b border-outline-variant pb-4">
               <div>
                 <h2 className="font-headline-md text-headline-md text-on-surface">
-                  Hardware Modules
+                  RUGGED BY DESIGN
                 </h2>
                 <div className="font-data-mono text-data-mono text-on-surface-variant mt-2">
-                  CUMULUS METERING UNIT
+                  01110011 01101100 01101111 01100011 01101011 01101001 01110100
                 </div>
               </div>
               <div className="font-label-caps text-label-caps text-outline hidden md:block">
-                VIEW 01 // VIEW 02
+                VIEW PHOT REEL
               </div>
             </div>
             {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -204,6 +217,45 @@ function Home() {
                 </div>
               ))}
             </Carousel>
+          </div>
+        </section>
+        <section
+          className="w-full py-24 bg-surface-bright relative technical-grid"
+          id="3d-cumulus"
+        >
+          <div className="max-w-[81%] mx-auto px-margin-desktop">
+            <div className="font-headline-md text-headline-md text-on-surface leading-tight inline-flex items-center gap-2 mb-1">
+              <h2>CUMULUS 3D / VR</h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={40}
+                height={40}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-rectangle-goggles-icon lucide-rectangle-goggles"
+              >
+                <path d="M20 6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-1.6-.8l-1.6-2.13a1 1 0 0 0-1.6 0L9.6 17.2A2 2 0 0 1 8 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" />
+              </svg>
+            </div>
+            <div className="font-data-mono text-data-mono text-on-surface-variant mb-2">
+              CUMULUS METERING UNIT
+            </div>
+            <div className="w-full relative crosshair crosshair-tl crosshair-br border border-on-surface p-2">
+              <model-viewer
+                alt="Cumulus Smart Meter 3D model"
+                src="./3D/cumulus.glb"
+                ar={true}
+                environment-image="./3D/ferndale_studio_07_4k.hdr"
+                // poster="./assets/cumulus5.webp"
+                shadow-intensity="1"
+                camera-controls
+                touch-action="pan-y"
+              ></model-viewer>
+            </div>
           </div>
         </section>
 
