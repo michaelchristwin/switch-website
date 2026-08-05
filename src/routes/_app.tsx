@@ -16,7 +16,7 @@ function RouteComponent() {
           <Link to="/">
             <img
               alt="Profile"
-              className="w-18 h-18 object-cover"
+              className="w-30 h-fit object-cover"
               src={SwitchLogo}
             />
           </Link>
@@ -104,7 +104,7 @@ function RouteComponent() {
             </Link>
             <Link
               className="hover:text-primary"
-              to="/"
+              to="/datasheet"
               hash="installation-guide"
             >
               Installation Guide

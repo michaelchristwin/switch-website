@@ -273,57 +273,6 @@ function Home() {
           </div>
         </section>
 
-        <section
-          className="w-full py-24 bg-surface-container-highest relative"
-          id="installation-guide"
-        >
-          <div className="max-w-[81%] mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="col-span-1 lg:col-span-4 flex flex-col gap-6">
-              <h2 className="font-headline-md text-headline-md text-on-surface">
-                Installation Guide
-              </h2>
-              <p className="font-body-base text-body-base text-on-surface-variant">
-                Monitor fleet health, track revenue recovery, and isolate tamper
-                events in real-time through the Switch Management Dashboard.
-              </p>
-              <div className="font-data-mono text-[10px] text-outline flex flex-col gap-2 mt-4">
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 bg-secondary rounded-full"></div>{' '}
-                  LATENCY &lt; 500ms
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 bg-secondary rounded-full"></div>{' '}
-                  99.9% UPTIME SLA
-                </span>
-              </div>
-              <Link
-                to="/datasheet"
-                className="w-fit mt-4 bg-transparent border border-on-surface text-on-surface font-label-caps text-sm px-6 py-3 hover:bg-on-surface hover:text-surface transition-colors flex items-center gap-2"
-              >
-                <span>VIEW DATASHEET</span>
-                <span className="material-symbols-outlined text-sm">
-                  open_in_new
-                </span>
-              </Link>
-            </div>
-            <div className="col-span-1 lg:col-span-8 relative">
-              <video
-                autoPlay
-                muted
-                playsInline
-                loop
-                preload="auto"
-                className="w-full h-auto object-cover border rounded-2xl aspect-video shadow-lg md:mx-auto"
-              >
-                <source
-                  src="https://res.cloudinary.com/dga4ze3p2/video/upload/v1785398678/how_to_install_cumulus.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-        </section>
-
         <section className="w-full bg-inverse-surface text-inverse-on-surface py-16 border-y border-outline">
           <div className="max-w-[81%] mx-auto px-margin-desktop">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
