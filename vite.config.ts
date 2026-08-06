@@ -7,6 +7,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
+  ssr: {
+    noExternal: ['@google/model-viewers'],
+  },
   plugins: [
     devtools(),
     tailwindcss(),
