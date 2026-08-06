@@ -274,46 +274,6 @@ function RouteComponent() {
                     <li key={part}>{part}</li>
                   ))}
                 </ol>
-                {/* <div className="bg-surface-container p-6 border border-outline-variant relative">
-                  <div className="absolute top-0 left-0 w-2 h-2 border-b border-r border-outline bg-surface"></div>
-                  <h3 className="font-label-caps text-label-caps text-on-surface mb-4">
-                    CERTIFICATION MARKS
-                  </h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="flex flex-col items-center justify-center p-4 border border-outline bg-surface hover:border-primary transition-colors">
-                      <span className="font-display-lg text-[24px] font-bold text-on-surface-variant leading-none mb-1">
-                        CE
-                      </span>
-                      <span className="font-data-mono text-[8px] text-outline">
-                        EN 50470-1/3
-                      </span>
-                    </div>
-                    <div className="flex flex-col items-center justify-center p-4 border border-outline bg-surface hover:border-primary transition-colors">
-                      <span className="font-display-lg text-[24px] font-bold text-on-surface-variant leading-none mb-1">
-                        MID
-                      </span>
-                      <span className="font-data-mono text-[8px] text-outline">
-                        DIR 2014/32/EU
-                      </span>
-                    </div>
-                    <div className="flex flex-col items-center justify-center p-4 border border-outline bg-surface hover:border-primary transition-colors">
-                      <span className="material-symbols-outlined text-[28px] text-on-surface-variant mb-1">
-                        verified_user
-                      </span>
-                      <span className="font-data-mono text-[8px] text-outline">
-                        DLMS CERT
-                      </span>
-                    </div>
-                    <div className="flex flex-col items-center justify-center p-4 border border-outline bg-surface hover:border-primary transition-colors">
-                      <span className="material-symbols-outlined text-[28px] text-on-surface-variant mb-1">
-                        shield
-                      </span>
-                      <span className="font-data-mono text-[8px] text-outline">
-                        IP54 RATED
-                      </span>
-                    </div>
-                  </div>
-                </div> */}
               </div>
               <div className="lg:col-span-2 relative">
                 {/* <!-- Conceptual Blueprint Image placeholder --> */}
@@ -365,31 +325,45 @@ function RouteComponent() {
               <h2 className="font-headline-md text-headline-md text-on-surface">
                 Installation Guide
               </h2>
-              <p className="font-body-base text-body-base text-on-surface-variant">
+              <p className="font-label-caps text-body-base text-on-surface-variant">
                 Remove the metal terminal cover by unscrewing the fasteners
                 before wiring. The meter features a standard DIN rail mounting
                 groove (item 7) compatible with 35mm DIN rails. For wall
                 mounting, use the provided bracket hardware and ensure the
                 enclosure is level and securely fastened.
               </p>
-              <Tabs className="w-75" defaultValue="three-phase">
-                <TabsList>
-                  <TabsTrigger value="single-phase">
+              <Tabs className="w-full" defaultValue="three-phase">
+                <TabsList className="bg-surface-container-low border border-outline-variant rounded-lg p-1 font-headline-md text-lg font-semibold w-full">
+                  <TabsTrigger
+                    value="single-phase"
+                    className="p-3 rounded-md text-on-surface-variant data-[state=active]:bg-primary data-[state=active]:text-on-primary data-[state=active]:shadow-sm transition-colors"
+                  >
                     Single Phase Wiring
                   </TabsTrigger>
-                  <TabsTrigger value="three-phase">
+                  <TabsTrigger
+                    value="three-phase"
+                    className="p-3 rounded-md text-on-surface-variant data-[state=active]:bg-primary data-[state=active]:text-on-primary data-[state=active]:shadow-sm transition-colors"
+                  >
                     Three Phase Wiring
                   </TabsTrigger>
                 </TabsList>
-                <TabsContent value="single-phase">
-                  <ul className="list-disc">
+
+                <TabsContent
+                  value="single-phase"
+                  className="mt-4 bg-surface-container rounded-lg p-4 border border-outline-variant"
+                >
+                  <ul className="list-disc list-inside space-y-1 font-label-caps text-body-base text-on-surface-variant">
                     {singlePhaseSteps.map((step) => (
                       <li key={step}>{step}</li>
                     ))}
                   </ul>
                 </TabsContent>
-                <TabsContent value="three-phase">
-                  <ul className="list-disc">
+
+                <TabsContent
+                  value="three-phase"
+                  className="mt-4 bg-surface-container rounded-lg p-4 border border-outline-variant"
+                >
+                  <ul className="list-disc list-inside space-y-1 font-label-caps text-body-base text-on-surface-variant">
                     {threePhaseSteps.map((step) => (
                       <li key={step}>{step}</li>
                     ))}

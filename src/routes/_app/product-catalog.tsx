@@ -10,7 +10,7 @@ const whatsappUrl = 'https://wa.me/2348081147003'
 
 const tags = {
   cumulus: ['35mm DIN rail x1', 'Modified truss screws x4', 'LoRa Antenna x1'],
-  maxwell: ['Energy metering', 'Technical data', 'Field hardware'],
+  maxwell: ['35mm DIN rail x1', 'Modified truss screws x4', 'LoRa Antenna x1'],
 }
 
 function RouteComponent() {
