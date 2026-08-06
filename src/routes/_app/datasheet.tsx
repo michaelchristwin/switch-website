@@ -271,7 +271,7 @@ function RouteComponent() {
                 </div>
                 <ol className="list-decimal font-label-caps text-[16px]">
                   {parts.map((part) => (
-                    <li key={part}>{part}</li>
+                    <li key={part}>{renderPart(part)}</li>
                   ))}
                 </ol>
               </div>
@@ -438,7 +438,10 @@ function RouteComponent() {
           </div>
         </section>
         {/* <!-- Engineering Drawings & Certifications --> */}
-        <section className="w-full py-24 bg-surface-bright relative">
+        <section
+          className="w-full py-24 bg-surface-bright relative"
+          id="wiring-diagram"
+        >
           <div className="max-w-[81%] mx-auto px-margin-desktop">
             <div className="flex justify-between items-end mb-12 border-b border-outline-variant pb-4">
               <div>
@@ -532,5 +535,23 @@ function RouteComponent() {
         </section>
       </div>
     </main>
+  )
+}
+
+const LINK_TEXT = '(see wiring diagram)'
+const LINK_HREF = '#wiring-diagram'
+
+function renderPart(text: string) {
+  if (!text.includes(LINK_TEXT)) return text
+
+  const [before, after] = text.split(LINK_TEXT)
+  return (
+    <>
+      {before}
+      <a href={LINK_HREF} className="text-primary underline">
+        {LINK_TEXT}
+      </a>
+      {after}
+    </>
   )
 }
