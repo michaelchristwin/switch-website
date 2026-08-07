@@ -248,6 +248,7 @@ function Home() {
               <model-viewer
                 alt="Cumulus Smart Meter 3D model"
                 src="https://whynotswitch.com/3D/cumulus-decimated.glb"
+                ios-src="https://whynotswitch.com/3D/cumulus.usdz"
                 ar
                 environment-image="https://whynotswitch.com/3D/ferndale_studio_07_4k.hdr"
                 ar-modes="webxr scene-viewer quick-look"
@@ -403,25 +404,25 @@ function Home() {
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-sm text-secondary-container">
                       check_circle
-                    </span>{' '}
+                    </span>
                     SON 62052-11
                   </span>
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-sm text-secondary-container">
                       check_circle
-                    </span>{' '}
+                    </span>
                     IEC 62053-21
                   </span>
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-sm text-secondary-container">
                       check_circle
-                    </span>{' '}
+                    </span>
                     NERC CERTIFIED
                   </span>
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-sm text-secondary-container">
                       check_circle
-                    </span>{' '}
+                    </span>
                     STS PREPAYMENT
                   </span>
                 </div>
@@ -501,8 +502,12 @@ function Home() {
                   </span>
                 </summary>
                 <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
-                  The datasheet page links to the techincal documentation (plus
-                  PDF) and installation guides.
+                  The{' '}
+                  <Link to="/datasheet" className="text-primary underline">
+                    datasheet page
+                  </Link>{' '}
+                  links to the techincal documentation (plus PDF) and
+                  installation guides.
                 </div>
               </details>
             </div>

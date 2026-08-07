@@ -273,7 +273,7 @@ function RouteComponent() {
                     PORT IDENTIFICATION
                   </h2>
                 </div>
-                <ol className="list-decimal font-label-caps text-[16px]">
+                <ol className="list-decimal font-data-mono text-data-mono text-on-surface-variant">
                   {parts.map((part) => (
                     <li key={part}>{renderPart(part)}</li>
                   ))}
@@ -329,7 +329,7 @@ function RouteComponent() {
               <h2 className="font-headline-md text-headline-md text-on-surface">
                 Installation Guide
               </h2>
-              <p className="font-label-caps text-body-base text-on-surface-variant">
+              <p className="font-data-mono text-data-mono text-[16px]! text-on-surface-variant">
                 Remove the metal terminal cover by unscrewing the fasteners
                 before wiring. The meter features a standard DIN rail mounting
                 groove (item 7) compatible with 35mm DIN rails. For wall
@@ -356,7 +356,7 @@ function RouteComponent() {
                   value="single-phase"
                   className="mt-4 bg-surface-container rounded-lg p-4 border border-outline-variant"
                 >
-                  <ul className="list-disc list-inside space-y-1 font-label-caps text-body-base text-on-surface-variant">
+                  <ul className="list-disc list-inside space-y-1 font-data-mono text-data-mono text-on-surface-variant">
                     {singlePhaseSteps.map((step) => (
                       <li key={step}>{step}</li>
                     ))}
@@ -367,7 +367,7 @@ function RouteComponent() {
                   value="three-phase"
                   className="mt-4 bg-surface-container rounded-lg p-4 border border-outline-variant"
                 >
-                  <ul className="list-disc list-inside space-y-1 font-label-caps text-body-base text-on-surface-variant">
+                  <ul className="list-disc list-inside space-y-1 font-data-mono text-data-mono text-on-surface-variant">
                     {threePhaseSteps.map((step) => (
                       <li key={step}>{step}</li>
                     ))}
@@ -388,7 +388,7 @@ function RouteComponent() {
                   xmlnsXlink="http://www.w3.org/1999/xlink"
                   fill="#000000"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g
                     id="SVGRepo_tracerCarrier"
                     strokeLinecap="round"
@@ -402,7 +402,8 @@ function RouteComponent() {
                       stroke="none"
                       strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+
+                      fillRule="evenodd"
                     >
                       <g
                         id="Dribbble-Light-Preview"
