@@ -486,8 +486,15 @@ function Home() {
                   </span>
                 </summary>
                 <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
-                  Contact Switch Electric with your site and system details to
-                  confirm the support available for your project.
+                  <a
+                    target="_blank"
+                    href="https://wa.me/2348081147003"
+                    className="text-primary underline"
+                  >
+                    Contact
+                  </a>{' '}
+                  Switch Electric with your site and system details to confirm
+                  the support available for your project.
                 </div>
               </details>
 
