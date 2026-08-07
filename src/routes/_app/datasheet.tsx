@@ -94,6 +94,7 @@ function RouteComponent() {
               <div className="flex items-center gap-4">
                 <a
                   href="/assets/cumulus-datasheet.pdf"
+                  download={'cumulus-datasheet.pdf'}
                   className="bg-primary text-on-primary md:px-8 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors"
                 >
                   <span className="material-symbols-outlined text-[18px]">
@@ -542,7 +543,8 @@ function RouteComponent() {
 }
 
 const LINK_TEXT = '(see wiring diagram)'
-const LINK_HREF = '#wiring-diagram'
+const LINK_TO = '/datasheet'
+const LINK_HASH = 'wiring-diagram'
 
 function renderPart(text: string) {
   if (!text.includes(LINK_TEXT)) return text
@@ -551,9 +553,9 @@ function renderPart(text: string) {
   return (
     <>
       {before}
-      <a href={LINK_HREF} className="text-primary underline">
+      <Link to={LINK_TO} hash={LINK_HASH} className="text-primary underline">
         {LINK_TEXT}
-      </a>
+      </Link>
       {after}
     </>
   )
