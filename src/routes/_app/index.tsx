@@ -247,7 +247,7 @@ function Home() {
             <div className="w-full relative crosshair crosshair-tl crosshair-br border border-on-surface p-2">
               <model-viewer
                 alt="Cumulus Smart Meter 3D model"
-                src="https://whynotswitch.com/3D/cumulus.glb"
+                src="https://whynotswitch.com/3D/cumulus-decimated.glb"
                 ar
                 environment-image="https://whynotswitch.com/3D/ferndale_studio_07_4k.hdr"
                 ar-modes="webxr scene-viewer quick-look"

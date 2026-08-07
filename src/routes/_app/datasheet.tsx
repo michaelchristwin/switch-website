@@ -92,12 +92,15 @@ function RouteComponent() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <button className="bg-primary text-on-primary md:px-8 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors">
+                <a
+                  href="/assets/cumulus-datasheet.pdf"
+                  className="bg-primary text-on-primary md:px-8 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors"
+                >
                   <span className="material-symbols-outlined text-[18px]">
                     download
                   </span>
                   DOWNLOAD PDF DATASHEET
-                </button>
+                </a>
                 <a
                   className="text-on-secondary bg-secondary hover:translate-y-1 md:px-8 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center gap-2 hover:bg-on-secondary-container transition-colors group"
                   href="https://wa.me/2349065787011"
