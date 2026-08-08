@@ -251,6 +251,7 @@ function Home() {
                 ios-src="https://whynotswitch.com/3D/cumulus.usdz"
                 ar
                 environment-image="https://whynotswitch.com/3D/ferndale_studio_07_4k.hdr"
+                poster="https://whynotswitch.com/assets/poster.webp"
                 ar-modes="webxr scene-viewer quick-look"
                 shadow-intensity="1"
                 camera-controls
@@ -393,7 +394,7 @@ function Home() {
                 <img
                   alt="Nigerian Power Sector Award"
                   className="w-full h-auto max-h-24 object-contain brightness-0 invert opacity-80"
-                  src="https://lh3.googleusercontent.com/aida/AP1WRLsNILHgojO0gHe91H_BM0TyQW1ywWf0xKACYJwMvJMvyUZyHxNXQytOg8E6J-7c2y9Ovbe16odI7cJfZtCctKuc9a8niup85PlphmJzYQQy2c5-0LaZn8Zc5_Ag0-1u7NWtYFO_ucJEpFFchF1K4I4yFaO2_v3a46hCaA54DWYVGiTJJTIAKs5KBDHnzuLzQg0FlDylt-W20_gGFBZBJHUu3CHisRPSsaeX6F3ABVCl2V8ejI0Oiv04Kg"
+                  src="./assets/award.webp"
                 />
               </div>
               <div className="col-span-1 md:col-span-2 flex flex-col gap-6 pl-0 md:pl-4">
