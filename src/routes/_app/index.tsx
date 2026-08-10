@@ -433,7 +433,7 @@ function Home() {
         </section>
 
         <section className="w-full py-24 bg-surface" id="faq">
-          <div className="max-w-4xl mx-auto px-margin-desktop">
+          <div className="max-w-[81%] mx-auto px-margin-desktop">
             <div className="text-center mb-16">
               <h2 className="font-headline-md text-headline-md text-on-surface">
                 Frequently Asked
@@ -524,8 +524,8 @@ function Home() {
 
         <section className="w-full bg-primary py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-size-[32px_32px]"></div>
-          <div className="max-w-4xl mx-auto px-margin-desktop text-center relative z-10 flex flex-col items-center">
-            <h2 className="font-display-lg text-display-lg text-on-primary mb-6">
+          <div className="max-w-[81%] mx-auto px-margin-desktop text-center relative z-10 flex flex-col items-center">
+            <h2 className="font-display-lg md:text-display-lg text-4xl font-bold leading-normal text-on-primary mb-6">
               Ready to upgrade your infrastructure?
             </h2>
             <p className="font-data-mono text-data-mono text-primary-fixed mb-10 max-w-2xl">
@@ -533,7 +533,7 @@ function Home() {
               technical schematics, and pilot deployment discussions.
             </p>
             <a
-              className="bg-secondary text-inverse-on-surface font-label-caps text-smF px-10 py-5 flex items-center gap-3 hover:bg-secondary/80 transition-transform hover:-translate-y-1 shadow-[4px_4px_0px_0px_var(--color-on-secondary-fixed-variant)] hover:shadow-none"
+              className="bg-secondary text-inverse-on-surface font-label-caps text-sm px-10 py-5 flex items-center gap-3 hover:bg-secondary/80 transition-transform hover:-translate-y-1 shadow-[4px_4px_0px_0px_var(--color-on-secondary-fixed-variant)] hover:shadow-none"
               target="_blank"
               href="https://wa.me/2348081147003"
             >

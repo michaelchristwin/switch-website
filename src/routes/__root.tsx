@@ -39,7 +39,7 @@ export const Route = createRootRoute({
       },
       {
         property: 'og:url',
-        content: 'https://www.whynotswitch.com/',
+        content: 'https://whynotswitch.com/',
       },
       {
         property: 'og:site_name',

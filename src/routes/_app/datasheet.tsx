@@ -91,11 +91,11 @@ function RouteComponent() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 <a
                   href="/assets/cumulus-datasheet.pdf"
                   download={'cumulus-datasheet.pdf'}
-                  className="bg-primary text-on-primary md:px-8 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors"
+                  className="bg-primary text-on-primary md:px-6 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest inline-flex items-center justify-around hover:bg-on-primary-fixed-variant transition-colors"
                 >
                   <span className="material-symbols-outlined text-[18px]">
                     download
@@ -103,12 +103,12 @@ function RouteComponent() {
                   DOWNLOAD PDF DATASHEET
                 </a>
                 <a
-                  className="text-on-secondary bg-secondary hover:translate-y-1 md:px-8 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center gap-2 hover:bg-on-secondary-container transition-colors group"
+                  className="bg-secondary text-on-secondary md:px-6 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest flex items-center justify-around hover:bg-on-secondary-container transition-colors group hover:translate-y-1"
                   href="https://wa.me/2349065787011"
                   target="_blank"
                 >
                   <span>TECHNICAL SUPPORT</span>
-                  <WhatsApp color="#ffffff" width={20} height={20} />
+                  <WhatsApp color="#ffffff" width={24} height={24} />
                 </a>
               </div>
             </div>
@@ -133,7 +133,7 @@ function RouteComponent() {
         </section>
         {/* <!-- Complete Spec Table Section --> */}
         <section className="w-full bg-surface-container-lowest border-b border-outline-variant">
-          <div className="md:max-w-[81%] max-w-full mx-auto px-margin-desktop py-16">
+          <div className="max-w-[81%] mx-auto px-margin-desktop py-16">
             <div className="flex items-center justify-between border-b-2 border-on-surface pb-4 mb-12 px-2">
               <h2 className="font-headline-md sm:text-headline-md text-xl font-semibold text-on-surface uppercase">
                 HARDWARE_PARAMETERS
@@ -146,7 +146,7 @@ function RouteComponent() {
               {/* <!-- Electrical Ratings --> */}
               <div>
                 <h3 className="font-label-caps text-label-caps text-primary mb-6 border-l-2 border-primary pl-3">
-                  ELECTRICAL_RATINGS
+                  ELECTRICAL RATINGS
                 </h3>
                 <div className="flex flex-col border-t border-outline-variant">
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
@@ -202,7 +202,7 @@ function RouteComponent() {
               {/* <!-- Environmental & Communication --> */}
               <div>
                 <h3 className="font-label-caps text-label-caps text-primary mb-6 border-l-2 border-primary pl-3">
-                  ENVIRON_&amp;_EXTERNALS
+                  ENVIRON &amp; EXTERNALS
                 </h3>
                 <div className="flex flex-col border-t border-outline-variant">
                   <div className="flex items-center justify-between py-4 border-b border-outline-variant hover:bg-surface-container-low transition-colors px-2">
@@ -337,21 +337,20 @@ function RouteComponent() {
                 enclosure is level and securely fastened.
               </p>
               <Tabs className="w-full" defaultValue="three-phase">
-                <TabsList className="bg-surface-container-low border border-outline-variant rounded-lg p-1 font-headline-md text-lg font-semibold w-full">
+                <TabsList className="grid grid-cols-2 gap-1 h-auto! items-stretch bg-surface-container-low border border-outline-variant rounded-sm p-1 w-full">
                   <TabsTrigger
                     value="single-phase"
-                    className="p-3 rounded-md text-on-surface-variant data-[state=active]:bg-primary data-[state=active]:text-on-primary data-[state=active]:shadow-sm transition-colors"
+                    className="h-full flex flex-col sm:flex-row items-center justify-center gap-1.5 p-2 sm:p-3 rounded-sm text-on-surface-variant text-center whitespace-normal leading-tight min-w-0 text-sm sm:text-base font-semibold border-b-2 border-transparent hover:bg-surface-container hover:text-on-surface data-[state=active]:bg-primary/10 data-[state=active]:border-primary data-[state=active]:text-primary transition-colors"
                   >
                     Single Phase Wiring
                   </TabsTrigger>
                   <TabsTrigger
                     value="three-phase"
-                    className="p-3 rounded-md text-on-surface-variant data-[state=active]:bg-primary data-[state=active]:text-on-primary data-[state=active]:shadow-sm transition-colors"
+                    className="h-full flex flex-col sm:flex-row items-center justify-center gap-1.5 p-2 sm:p-3 rounded-sm text-on-surface-variant text-center whitespace-normal leading-tight min-w-0 text-sm sm:text-base font-semibold border-b-2 border-transparent hover:bg-surface-container hover:text-on-surface data-[state=active]:bg-primary/10 data-[state=active]:border-primary data-[state=active]:text-primary transition-colors"
                   >
                     Three Phase Wiring
                   </TabsTrigger>
                 </TabsList>
-
                 <TabsContent
                   value="single-phase"
                   className="mt-4 bg-surface-container rounded-lg p-4 border border-outline-variant"

@@ -198,7 +198,7 @@ function RouteComponent() {
             <span className="font-label-caps text-sm uppercase tracking-widest text-white">
               Start a conversation
             </span>
-            <h2 className="mt-4 font-display-lg text-display-lg text-on-primary">
+            <h2 className="mt-4 font-display-lg md:text-display-lg text-4xl font-bold leading-normal text-on-primary">
               Planning an energy project? Let's specify the right meter.
             </h2>
           </div>
