@@ -1,10 +1,4 @@
-interface WhatsAppProps {
-  width: number
-  height: number
-  color: string
-}
-
-export function WhatsApp({ width, height, color }: WhatsAppProps) {
+export function WhatsApp({ width, height, color }: SVGProps) {
   return (
     <svg
       viewBox="0 0 24 24"

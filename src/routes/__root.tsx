@@ -21,10 +21,7 @@ export const Route = createRootRoute({
         content:
           'Switch has introduced the first smart meter designed for web3 solar projects. Our meters enable individuals to monetize solar power, which in turn helps decentralize energy grid, while ensuring their data is transparent, verifiable and secures',
       },
-      {
-        name: 'google-site-verification',
-        content: '7Md7CnryEOcKgtedcz1Sm9ytVy_VZMDuVBJfS8D-JkU',
-      },
+
       {
         name: 'author',
         content: 'Switch Electric',
@@ -111,13 +108,18 @@ export const Route = createRootRoute({
       },
       {
         rel: 'canonical',
-        href: 'https://www.whynotswitch.com/',
+        href: 'https://whynotswitch.com/',
       },
     ],
     scripts: [
       {
-        async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-ZVCXJTT66C',
+        children: `
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-KS9N5XC');
+        `,
       },
     ],
   }),
@@ -131,6 +133,17 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KS9N5XC"
+            height="0"
+            width="0"
+            style={{
+              display: 'none',
+              visibility: 'hidden',
+            }}
+          />
+        </noscript>
         {children}
         <TanStackDevtools
           config={{

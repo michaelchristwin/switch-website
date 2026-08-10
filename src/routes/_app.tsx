@@ -1,6 +1,9 @@
 import { createFileRoute, Outlet, Link } from '@tanstack/react-router'
+import { useState } from 'react'
 import SwitchLogo from '#/assets/brand-logo.png'
 import { WhatsApp } from '#/components/icons/WhatsApp'
+import { Menu } from '#/components/icons/Menu'
+import { X } from '#/components/icons/X'
 
 export const Route = createFileRoute('/_app')({
   component: RouteComponent,
@@ -10,6 +13,7 @@ const navLinks: { path: string; slug: string }[] = [
 ] as const
 
 function RouteComponent() {
+  const [mobileOpen, setMobileOpen] = useState(false)
   return (
     <div className="bg-surface font-body-base text-on-surface technical-grid">
       <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant">
@@ -23,11 +27,12 @@ function RouteComponent() {
           </Link>
 
           <div className="flex items-center gap-5 md:gap-7">
-            <nav className="hidden lg:flex items-center gap-8">
+            {/* Desktop nav — unchanged */}
+            <nav className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
-                  className="font-label-caps text-sm transition-colors tracking-widest "
+                  className="font-label-caps text-sm transition-colors tracking-widest"
                   activeProps={{
                     className: 'text-secondary border-b-2 border-secondary',
                   }}
@@ -40,16 +45,59 @@ function RouteComponent() {
                 </Link>
               ))}
             </nav>
+
             <a
-              className="bg-secondary text-on-secondary px-6 py-3 font-label-caps text-sm flex items-center gap-2 hover:bg-on-secondary-container transition-all"
+              className="bg-secondary text-on-secondary md:px-6 px-4 py-3 font-label-caps text-sm hidden md:flex items-center gap-2 hover:bg-on-secondary-container transition-all"
               target="_blank"
               href="https://wa.me/2348081147003"
             >
               <span>WHATSAPP</span>
               <WhatsApp width={20} height={20} color="#ffffff" />
             </a>
+
+            {/* Mobile toggle button */}
+            <button
+              className="md:hidden p-2 text-on-surface-variant"
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+            >
+              {mobileOpen ? (
+                <X width={24} height={24} color="#ffffff" />
+              ) : (
+                <Menu width={24} height={24} color="#ffffff" />
+              )}
+            </button>
           </div>
         </div>
+
+        {mobileOpen && (
+          <nav className="md:hidden flex flex-col bg-surface border-t border-outline-variant px-margin-desktop py-4 gap-4 divide-y divide-outline-variant">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                className="font-label-caps text-sm tracking-widest mx-auto w-full block text-center"
+                activeProps={{ className: 'text-secondary' }}
+                inactiveProps={{
+                  className: 'text-on-surface-variant hover:text-secondary',
+                }}
+                to={link.path}
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.slug}
+              </Link>
+            ))}
+            <a
+              className="bg-secondary text-on-secondary px-6  py-3 font-label-caps text-sm flex w-fit mx-auto items-center gap-2 hover:bg-on-secondary-container transition-all"
+              target="_blank"
+              href="https://wa.me/2348081147003"
+              onClick={() => setMobileOpen(false)}
+            >
+              <span>WHATSAPP</span>
+              <WhatsApp width={20} height={20} color="#ffffff" />
+            </a>
+          </nav>
+        )}
       </header>
       <Outlet />
       <footer className="w-full bg-on-surface text-surface font-label-caps">
