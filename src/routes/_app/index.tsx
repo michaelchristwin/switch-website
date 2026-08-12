@@ -11,7 +11,17 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { useEffect, useRef } from 'react'
 
 const cumulusImages = [Cumulus5, Cumulus4, Cumulus3, Cumulus2, Cumulus1]
-export const Route = createFileRoute('/_app/')({ component: Home })
+export const Route = createFileRoute('/_app/')({
+  component: Home,
+  head: () => ({
+    links: [
+      {
+        rel: 'canonical',
+        href: 'https://whynotswitch.com/',
+      },
+    ],
+  }),
+})
 
 function Home() {
   const introVideo = useRef<HTMLVideoElement | null>(null)

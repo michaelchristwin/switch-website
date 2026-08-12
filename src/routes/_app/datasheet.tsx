@@ -7,6 +7,12 @@ export const Route = createFileRoute('/_app/datasheet')({
   component: RouteComponent,
   head: () => ({
     meta: [{ title: 'DataSheet' }],
+    links: [
+      {
+        rel: 'canonical',
+        href: 'https://whynotswitch.com/datasheet',
+      },
+    ],
   }),
 })
 
@@ -124,7 +130,7 @@ function RouteComponent() {
               <div className="relative w-full p-8">
                 <iframe
                   className="h-100 w-full border border-outline bg-white sm:h-130"
-                  src="/assets/cumulus-datasheet.pdf#view=FitH"
+                  src="https://whynotswitch.com/assets/cumulus-datasheet.pdf#view=FitH"
                   title="Cumulus product data sheet"
                 />
               </div>
@@ -136,7 +142,7 @@ function RouteComponent() {
           <div className="max-w-[81%] mx-auto px-margin-desktop py-16">
             <div className="flex items-center justify-between border-b-2 border-on-surface pb-4 mb-12 px-2">
               <h2 className="font-headline-md sm:text-headline-md text-xl font-semibold text-on-surface uppercase">
-                HARDWARE_PARAMETERS
+                HARDWARE PARAMETERS
               </h2>
               <span className="font-data-mono text-data-mono text-outline uppercase">
                 REV_2.4.1
