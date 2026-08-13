@@ -99,7 +99,7 @@ function RouteComponent() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <a
-                  href="/assets/cumulus-datasheet.pdf"
+                  href="https://whynotswitch.com/assets/cumulus-datasheet.pdf"
                   download={'cumulus-datasheet.pdf'}
                   className="bg-primary text-on-primary md:px-6 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest inline-flex items-center justify-around hover:bg-on-primary-fixed-variant transition-colors"
                 >
