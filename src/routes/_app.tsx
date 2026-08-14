@@ -72,7 +72,7 @@ function RouteComponent() {
         </div>
 
         {mobileOpen && (
-          <nav className="md:hidden flex flex-col bg-surface border-t border-outline-variant px-margin-desktop py-4 gap-4 divide-y divide-outline-variant">
+          <nav className="md:hidden flex flex-col bg-surface/90 border-t border-outline-variant px-margin-desktop py-4 gap-4 divide-y divide-outline-variant">
             {navLinks.map((link) => (
               <Link
                 key={link.path}

@@ -115,9 +115,22 @@ function Home() {
           <div className="max-w-[81%] mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
             <div>
               <div className="font-label-caps text-label-caps text-inverse-primary mb-4 flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm">
-                  warning
-                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={22}
+                  height={22}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-triangle-alert-icon lucide-triangle-alert"
+                >
+                  <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+                  <path d="M12 9v4" />
+                  <path d="M12 17h.01" />
+                </svg>
                 GRID_REALITY // NG_SECTOR
               </div>
               <h2 className="font-headline-md text-headline-md mb-6 max-w-lg">
@@ -413,27 +426,75 @@ function Home() {
                 </div>
                 <div className="flex flex-wrap gap-4 font-data-mono text-sm text-inverse-on-surface">
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm text-secondary-container">
-                      check_circle
-                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={22}
+                      height={22}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#b8f2a6"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-circle-check-icon lucide-circle-check"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
                     SON 62052-11
                   </span>
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm text-secondary-container">
-                      check_circle
-                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={22}
+                      height={22}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#b8f2a6"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-circle-check-icon lucide-circle-check"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
                     IEC 62053-21
                   </span>
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm text-secondary-container">
-                      check_circle
-                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={22}
+                      height={22}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#b8f2a6"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-circle-check-icon lucide-circle-check"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
                     NERC CERTIFIED
                   </span>
                   <span className="border border-surface-container-highest/50 px-3 py-1 flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm text-secondary-container">
-                      check_circle
-                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={22}
+                      height={22}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#b8f2a6"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-circle-check-icon lucide-circle-check"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
                     STS PREPAYMENT
                   </span>
                 </div>
@@ -459,9 +520,21 @@ function Home() {
                     <span className="text-outline text-sm">01</span> What kind
                     of projects is Cumulus for?
                   </span>
-                  <span className="material-symbols-outlined group-open:rotate-180 transition-transform">
-                    expand_more
-                  </span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-chevron-down-icon lucide-chevron-down group-open:rotate-180 transition-transform"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
                   Cumulus is developed for decentralized electricity and
@@ -476,9 +549,20 @@ function Home() {
                     <span className="text-outline text-sm">02</span> Can I get
                     pricing online?
                   </span>
-                  <span className="material-symbols-outlined group-open:rotate-180 transition-transform">
-                    expand_more
-                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-chevron-down-icon lucide-chevron-down group-open:rotate-180 transition-transform"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
                   Pricing is handled by enquiry because configuration, quantity,
@@ -492,9 +576,20 @@ function Home() {
                     <span className="text-outline text-sm">03</span> Is
                     installation support available?
                   </span>
-                  <span className="material-symbols-outlined group-open:rotate-180 transition-transform">
-                    expand_more
-                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-chevron-down-icon lucide-chevron-down group-open:rotate-180 transition-transform"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
                   <a
@@ -515,9 +610,20 @@ function Home() {
                     <span className="text-outline text-sm">04</span> Where can I
                     find technical documentation?
                   </span>
-                  <span className="material-symbols-outlined group-open:rotate-180 transition-transform">
-                    expand_more
-                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-chevron-down-icon lucide-chevron-down group-open:rotate-180 transition-transform"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div className="pb-6 font-label-caps text-on-surface-variant pl-10 pr-4">
                   The{' '}
