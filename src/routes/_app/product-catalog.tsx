@@ -150,7 +150,7 @@ function RouteComponent() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
                     className="bg-on-surface px-5 py-4 font-label-caps text-sm text-surface transition-transform hover:-translate-y-0.5 flex justify-center items-center gap-2"
-                    href="/assets/maxwell-datasheet.pdf"
+                    href="https://4d0q8goh6e8ahxe4.public.blob.vercel-storage.com/maxwell-datasheet.pdf"
                     rel="noreferrer"
                     target="_blank"
                   >

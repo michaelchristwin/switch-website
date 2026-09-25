@@ -99,8 +99,9 @@ function RouteComponent() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <a
-                  href="/assets/cumulus-datasheet.pdf"
+                  href="https://4d0q8goh6e8ahxe4.public.blob.vercel-storage.com/cumulus-datasheet.pdf"
                   download={'cumulus-datasheet.pdf'}
+                  target="_blank"
                   className="bg-primary text-on-primary md:px-6 px-4 md:py-4 py-3 font-label-caps text-xs sm:text-sm tracking-widest inline-flex items-center justify-around hover:bg-on-primary-fixed-variant transition-colors"
                 >
                   <svg
@@ -143,7 +144,7 @@ function RouteComponent() {
               <div className="relative w-full p-8">
                 <iframe
                   className="h-100 w-full border border-outline bg-white sm:h-130"
-                  src="/assets/cumulus-datasheet.pdf#view=FitH"
+                  src="https://4d0q8goh6e8ahxe4.public.blob.vercel-storage.com/cumulus-datasheet.pdf#view=FitH"
                   title="Cumulus product data sheet"
                 />
               </div>
