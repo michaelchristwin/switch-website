@@ -16,6 +16,8 @@ const config = defineConfig({
     tanstackStart({
       prerender: {
         enabled: true,
+        filter: ({ path }) =>
+          !path.startsWith('/assets/') && !path.endsWith('.pdf'),
         crawlLinks: true,
         autoStaticPathsDiscovery: true, // auto-discovers static routes
         concurrency: 14,
