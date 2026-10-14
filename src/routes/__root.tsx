@@ -36,7 +36,7 @@ export const Route = createRootRoute({
       },
       {
         property: 'og:url',
-        content: 'https://whynotswitch.com/',
+        content: 'https://whynotswitch.com',
       },
       {
         property: 'og:site_name',
@@ -58,6 +58,7 @@ export const Route = createRootRoute({
         name: 'twitter:site',
         content: '@whynotswitch',
       },
+      { name: 'twitter:url', content: 'https://whynotswitch.com' },
       {
         name: 'twitter:creator',
         content: '@@whynotswitch',

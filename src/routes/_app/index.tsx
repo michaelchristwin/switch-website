@@ -270,11 +270,11 @@ function Home() {
             <div className="w-full relative crosshair crosshair-tl crosshair-br border border-on-surface p-2">
               <model-viewer
                 alt="Cumulus Smart Meter 3D model"
-                src="https://whynotswitch.com/3D/cumulus-decimated.glb"
-                ios-src="https://whynotswitch.com/3D/cumulus.usdz"
+                src="/3D/cumulus-decimated.glb"
+                ios-src="/3D/cumulus.usdz"
                 ar
-                environment-image="https://whynotswitch.com/3D/ferndale_studio_07_4k.hdr"
-                poster="https://whynotswitch.com/assets/poster.webp"
+                environment-image="/3D/ferndale_studio_07_4k.hdr"
+                poster="/assets/poster.webp"
                 ar-modes="webxr scene-viewer quick-look"
                 shadow-intensity="1"
                 camera-controls

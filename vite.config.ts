@@ -5,6 +5,9 @@ import viteReact, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
 
+const EXCLUDED_PREFIXES = ['/assets/', '/3d/']
+const EXCLUDED_EXTENSIONS = ['.pdf', '.glb', '.gltf', '.bin', 'usdz']
+
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
   ssr: {
@@ -17,7 +20,8 @@ const config = defineConfig({
       prerender: {
         enabled: true,
         filter: ({ path }) =>
-          !path.startsWith('/assets/') && !path.endsWith('.pdf'),
+          !EXCLUDED_PREFIXES.some((p) => path.startsWith(p)) &&
+          !EXCLUDED_EXTENSIONS.some((e) => path.endsWith(e)),
         crawlLinks: true,
         autoStaticPathsDiscovery: true, // auto-discovers static routes
         concurrency: 14,
