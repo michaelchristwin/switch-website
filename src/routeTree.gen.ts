@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SplatRouteImport } from './routes/$'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as AppIndexRouteImport } from './routes/_app/index'
 import { Route as AppDatasheetRouteImport } from './routes/_app/datasheet'
 import { Route as AppProductCatalogRouteImport } from './routes/_app/product-catalog'
 
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AppRoute = AppRouteImport.update({
   id: '/_app',
   getParentRoute: () => rootRouteImport,
@@ -35,17 +41,20 @@ const AppProductCatalogRoute = AppProductCatalogRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
+  '/$': typeof SplatRoute
   '/': typeof AppIndexRoute
   '/datasheet': typeof AppDatasheetRoute
   '/product-catalog': typeof AppProductCatalogRoute
 }
 export interface FileRoutesByTo {
+  '/$': typeof SplatRoute
   '/datasheet': typeof AppDatasheetRoute
   '/product-catalog': typeof AppProductCatalogRoute
   '/': typeof AppIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/$': typeof SplatRoute
   '/_app': typeof AppRouteWithChildren
   '/_app/datasheet': typeof AppDatasheetRoute
   '/_app/product-catalog': typeof AppProductCatalogRoute
@@ -53,11 +62,12 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/datasheet' | '/product-catalog'
+  fullPaths: '/$' | '/' | '/datasheet' | '/product-catalog'
   fileRoutesByTo: FileRoutesByTo
-  to: '/datasheet' | '/product-catalog' | '/'
+  to: '/$' | '/datasheet' | '/product-catalog' | '/'
   id:
     | '__root__'
+    | '/$'
     | '/_app'
     | '/_app/datasheet'
     | '/_app/product-catalog'
@@ -65,11 +75,19 @@ export interface FileRouteTypes {
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  SplatRoute: typeof SplatRoute
   AppRoute: typeof AppRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_app': {
       id: '/_app'
       path: ''
@@ -116,6 +134,7 @@ const AppRouteChildren: AppRouteChildren = {
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
+  SplatRoute: SplatRoute,
   AppRoute: AppRouteWithChildren,
 }
 export const routeTree = rootRouteImport
