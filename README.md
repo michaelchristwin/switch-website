@@ -1,217 +1,134 @@
-Welcome to your new TanStack Start app!
+# Switch Website
 
-# Getting Started
+The official landing page for [**Switch Electric**](https://github.com/WhyNotSwitch), a company building web3 metering infrastructure and a platform for tokenizing rooftop solar assets.
 
-To run this application:
+🌐 **Live site:** [whynotswitch.vercel.app](https://whynotswitch.vercel.app)
+🏢 **Organization:** [@WhyNotSwitch](https://github.com/WhyNotSwitch)
+
+---
+
+## About Switch Electric
+
+Switch Electric is building the technological infrastructure for a decentralized energy internet and a peer-to-peer marketplace where producers can sell excess energy directly at wholesale prices. The long-term vision is a cost-effective, decentralized energy network serving Africa's 1 billion people.
+
+Its flagship hardware, the **Cumulus**, uses real-time sensors and web3 technologies to enable metering in decentralized energy systems such as microgrids. It samples voltage, current, frequency and power factor to calculate accurate readings of energy produced or consumed, and supports features like remote asset administration, anomaly and energy-loss detection, and a remotely controllable relay.
+
+This repository contains the source for the public website that introduces the company, its products and its mission. Product documentation lives in the organization's [Maxwell-Docs](https://github.com/WhyNotSwitch/Maxwell-Docs) repository.
+
+## Tech Stack
+
+| Layer                | Tool                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| Framework            | [TanStack Start](https://tanstack.com/start)                                         |
+| Routing              | [TanStack Router](https://tanstack.com/router) (file-based)                          |
+| Language             | [TypeScript](https://www.typescriptlang.org/)                                        |
+| Bundler / dev server | [Vite](https://vite.dev/)                                                            |
+| Server adapter       | [Nitro](https://nitro.build/)                                                        |
+| Styling              | [Tailwind CSS](https://tailwindcss.com/)                                             |
+| UI components        | [shadcn/ui](https://ui.shadcn.com/)                                                  |
+| Linting / formatting | [ESLint](https://eslint.org/) (TanStack config) and [Prettier](https://prettier.io/) |
+| Package manager      | [pnpm](https://pnpm.io/)                                                             |
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (current LTS recommended)
+- [pnpm](https://pnpm.io/installation)
+
+### Installation
 
 ```bash
+git clone https://github.com/michaelchristwin/switch-website.git
+cd switch-website
 pnpm install
+```
+
+### Development
+
+```bash
 pnpm dev
 ```
 
-# Building For Production
+The dev server prints the local URL when it starts, so check your terminal for the port.
 
-To build this application for production:
+### Production Build
 
 ```bash
 pnpm build
 ```
 
-## Styling
-
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
-
-### Removing Tailwind CSS
-
-If you prefer not to use Tailwind CSS:
-
-1. Remove the demo pages in `src/routes/demo/`
-2. Replace the Tailwind import in `src/styles.css` with your own styles
-3. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
-4. Remove `@tailwindcss/vite` and `tailwindcss` from `package.json`
-
-## Linting & Formatting
-
-
-This project uses [eslint](https://eslint.org/) and [prettier](https://prettier.io/) for linting and formatting. Eslint is configured using [tanstack/eslint-config](https://tanstack.com/config/latest/docs/eslint). The following scripts are available:
+The build output is a self-contained Node server in `dist/`. To run it locally:
 
 ```bash
-pnpm lint
-pnpm format
-pnpm check
-```
-
-
-## Deploy with Nitro
-
-This project uses Nitro as a generic server adapter, so it can run on any Node-compatible host.
-
-```bash
-npm run build
 node dist/server/index.mjs
 ```
 
-The build output is a self-contained Node server. To deploy, push the `dist/` directory to your host (Render, Fly.io, your own VPS, etc.) and run the server command above.
+### Linting & Formatting
 
-For host-specific presets (Vercel, Netlify, Cloudflare, AWS Lambda, etc.) and tuning, see https://v3.nitro.build/deploy.
+```bash
+pnpm lint      # run ESLint
+pnpm format    # run Prettier
+pnpm check     # run formatting and lint fixes together
+```
 
+## Project Structure
 
-## Shadcn
+```
+.
+├── public/                # Static assets served as-is
+├── src/
+│   ├── routes/            # File-based routes (TanStack Router)
+│   └── styles.css         # Global styles and Tailwind import
+├── components.json        # shadcn/ui configuration
+├── eslint.config.js       # ESLint configuration
+├── prettier.config.js     # Prettier configuration
+├── tsr.config.json        # TanStack Router configuration
+├── vite.config.ts         # Vite configuration
+└── package.json
+```
 
-Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
+## Working With the Codebase
+
+**Adding a route.** Create a new file in `src/routes/`. TanStack Router generates the route boilerplate automatically. Use the `Link` component from `@tanstack/react-router` for client-side navigation:
+
+```tsx
+import { Link } from '@tanstack/react-router'
+
+;<Link to="/about">About</Link>
+```
+
+**Shared layout.** The root layout lives in `src/routes/__root.tsx`. Anything placed there appears on every page.
+
+**Adding UI components.** Use the shadcn CLI:
 
 ```bash
 pnpm dlx shadcn@latest add button
 ```
 
+## Deployment
 
+The production site is hosted on [Vercel](https://whynotswitch.vercel.app). Because the project uses Nitro as a generic server adapter, it can also run on any Node-compatible host (Render, Fly.io, a VPS, and so on) by deploying the `dist/` output and running `node dist/server/index.mjs`.
 
-## Routing
+For host-specific presets (Vercel, Netlify, Cloudflare, AWS Lambda and others), see the [Nitro deployment docs](https://v3.nitro.build/deploy).
 
-This project uses [TanStack Router](https://tanstack.com/router) with file-based routing. Routes are managed as files in `src/routes`.
+## Contributing
 
-### Adding A Route
+Contributions are welcome.
 
-To add a new route to your application just add a new file in the `./src/routes` directory.
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feat/your-change`
+3. Run `pnpm check` before committing
+4. Commit your changes: `git commit -m "feat: describe your change"`
+5. Push to your branch and open a pull request
 
-TanStack will automatically generate the content of the route file for you.
+For bugs or suggestions, please [open an issue](https://github.com/michaelchristwin/switch-website/issues).
 
-Now that you have two routes you can use a `Link` component to navigate between them.
+## Related
 
-### Adding Links
+- [Switch Electric on GitHub](https://github.com/WhyNotSwitch)
+- [Brand-kit](https://github.com/WhyNotSwitch/Brand-kit): brand assets
 
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
+## License
 
-```tsx
-import { Link } from "@tanstack/react-router";
-```
-
-Then anywhere in your JSX you can use it like so:
-
-```tsx
-<Link to="/about">About</Link>
-```
-
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you render `{children}` in the `shellComponent`.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My App' },
-    ],
-  }),
-  shellComponent: ({ children }) => (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <header>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-          </nav>
-        </header>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  ),
-})
-```
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-## Server Functions
-
-TanStack Start provides server functions that allow you to write server-side code that seamlessly integrates with your client components.
-
-```tsx
-import { createServerFn } from '@tanstack/react-start'
-
-const getServerTime = createServerFn({
-  method: 'GET',
-}).handler(async () => {
-  return new Date().toISOString()
-})
-
-// Use in a component
-function MyComponent() {
-  const [time, setTime] = useState('')
-  
-  useEffect(() => {
-    getServerTime().then(setTime)
-  }, [])
-  
-  return <div>Server time: {time}</div>
-}
-```
-
-## API Routes
-
-You can create API routes by using the `server` property in your route definitions:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-import { json } from '@tanstack/react-start'
-
-export const Route = createFileRoute('/api/hello')({
-  server: {
-    handlers: {
-      GET: () => json({ message: 'Hello, World!' }),
-    },
-  },
-})
-```
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/people')({
-  loader: async () => {
-    const response = await fetch('https://swapi.dev/api/people')
-    return response.json()
-  },
-  component: PeopleComponent,
-})
-
-function PeopleComponent() {
-  const data = Route.useLoaderData()
-  return (
-    <ul>
-      {data.results.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ul>
-  )
-}
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-
-
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
-
-For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+No license has been specified yet. Add a `LICENSE` file to clarify how others may use this code.
